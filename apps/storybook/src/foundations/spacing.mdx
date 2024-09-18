@@ -1,0 +1,25 @@
+import { Meta, Source } from "@storybook/blocks";
+import tokens from "@repo/design-tokens";
+
+import Card from '../components/Card';
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 1fr)',
+  gap: '1rem'
+}}>
+  <Card lead="xxxsmall" title="Integer" content={tokens.spacing.xxxsmall} />
+  <Card lead="xxsmall" title="Integer" content={tokens.spacing.xxsmall} />
+  <Card lead="xsmall" title="Integer" content={tokens.spacing.xsmall} />
+  <Card lead="small" title="Integer" content={tokens.spacing.small} />
+  <Card lead="medium" title="Integer" content={tokens.spacing.medium} />
+  <Card lead="large" title="Integer" content={tokens.spacing.large} />
+  <Card lead="xlarge" title="Integer" content={tokens.spacing.xlarge} />
+  <Card lead="xxlarge" title="Integer" content={tokens.spacing.xxlarge} />
+  <Card lead="xxxlarge" title="Integer" content={tokens.spacing.xxxlarge} />
+</div>
+
