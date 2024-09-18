@@ -1,21 +1,76 @@
-import { Meta, Source } from '@storybook/blocks'
+import { Meta, Source } from "@storybook/blocks";
+import tokens from "@repo/design-tokens";
+
+import DesignSystemPalette from "../components/DesignSystemPalette";
+import GradientColor from "../components/GradientColor";
 
 <Meta title="Tokens/Colors" />
 
 # Color Tokens
 
-We use named colors (e.g. Neutral or Action) instead of color literals (e.g. blue).
-color palettes represent functions, so that we can make interactions and contexts easy
-to distinguish.
-
 ## Neutral
+
+<DesignSystemPalette name="Neutral" colors={tokens.color.neutral} />
 
 ## Red
 
+<DesignSystemPalette name="Red" colors={tokens.color.red} />
+
 ## Yellow
+
+<DesignSystemPalette name="Yellow" colors={tokens.color.yellow} />
 
 ## Green
 
+<DesignSystemPalette name="Green" colors={tokens.color.green} />
+
 ## Blue
 
+<DesignSystemPalette name="Blue" colors={tokens.color.blue} />
+
 ## Gradient
+
+<DesignSystemPalette name="Gradient" colors={tokens.color.gradient} />
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 1fr)'
+}}>
+
+<div>
+### Blue
+
+<GradientColor colors={[
+  tokens.color.gradient.psychology01,
+  tokens.color.gradient.psychology02,
+  tokens.color.gradient.psychology03,
+  tokens.color.gradient.psychology04
+]} />
+</div>
+
+<div>
+### Green
+
+<GradientColor
+  colors={[
+    tokens.color.gradient.biology01,
+    tokens.color.gradient.biology02,
+    tokens.color.gradient.biology03,
+    tokens.color.gradient.biology04,
+  ]}
+/>
+
+</div>
+
+<div>
+### Red
+
+<GradientColor colors={[
+  tokens.color.gradient.social01,
+  tokens.color.gradient.social02,
+  tokens.color.gradient.social03,
+  tokens.color.gradient.social04
+]} />
+</div>
+
+</div>
