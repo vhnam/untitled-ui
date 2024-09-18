@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/react-vite";
+import type { StorybookConfig } from "@storybook/nextjs";
 
 import { join, dirname } from "path";
 
@@ -19,8 +19,18 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-interactions"),
   ],
   framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
+    name: getAbsolutePath("@storybook/nextjs"),
     options: {},
   },
+  staticDirs: [
+    {
+      from: "../node_modules/geist/dist/fonts/geist-sans",
+      to: "/fonts/geist-sans",
+    },
+    {
+      from: "../node_modules/geist/dist/fonts/geist-mono",
+      to: "/fonts/geist-mono",
+    },
+  ],
 };
 export default config;
