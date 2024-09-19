@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import type { Preview } from "@storybook/react";
 import React from "react";
+import { DocsContainer, Unstyled } from "@storybook/blocks";
+
 import "@repo/ui/styles.css";
 
 const GeistSans = localFont({
@@ -8,20 +10,17 @@ const GeistSans = localFont({
   variable: "--font-geist-sans",
 });
 
-const GeistMono = localFont({
-  src: "../fonts/geist-mono/GeistMono-Variable.woff2",
-  variable: "--font-geist-mono",
-});
-
 const preview: Preview = {
-  decorators: [
-    (Story) => (
-      <div className={`${GeistMono.variable} ${GeistSans.variable}`}>
-        <Story />
-      </div>
-    ),
-  ],
   parameters: {
+    docs: {
+      container: ({ children, context }) => (
+        <DocsContainer context={context}>
+          <Unstyled>
+            <div className={GeistSans.className}>{children}</div>
+          </Unstyled>
+        </DocsContainer>
+      ),
+    },
     options: {
       storySort: {
         method: "alphabetical",
