@@ -4,7 +4,7 @@ import styles from "./Card.module.css";
 
 interface IProps {
   lead: string;
-  title: string;
+  title?: string;
   content: ReactNode;
   leading?: ReactNode;
 }

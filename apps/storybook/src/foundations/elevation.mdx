@@ -13,18 +13,14 @@ import Elevation from "../components/Elevation";
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "1rem",
-
-}}
-
-> {Object.keys(tokens.elevation).map((elevationLevel) => (
-
+  }}
+> 
+  {Object.keys(tokens.elevation).map((elevationLevel) => (
     <Card
       key={elevationLevel}
       lead={elevationLevel}
-      title={elevationLevel}
       content={<Elevation value={tokens.elevation[elevationLevel]} />}
     />
-
 ))}
 
 </div>

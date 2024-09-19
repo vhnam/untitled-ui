@@ -1,0 +1,36 @@
+import { Meta, Source } from "@storybook/blocks";
+import tokens from "@repo/design-tokens";
+
+import Card from "../components/Card";
+
+<Meta title="Foundations/Border Width" />
+
+# Elevation
+
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "1rem",
+  }}
+>
+  {Object.keys(tokens.borderWidth).map((borderLevel) => (
+    <Card
+      key={borderLevel}
+      lead={borderLevel}
+      title="Integer"
+      content={
+        <div
+          style={{
+            width: "10rem",
+            height: "3rem",
+            padding: "0.5rem",
+            border: `${tokens.borderWidth[borderLevel]}px solid #0c0a09`,
+          }}
+        >
+          {tokens.borderWidth[borderLevel]}px
+        </div>
+      }
+    />
+  ))}
+</div>
