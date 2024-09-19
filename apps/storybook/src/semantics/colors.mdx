@@ -1,0 +1,97 @@
+import { Meta, Source } from "@storybook/blocks";
+import tokens from "@repo/design-tokens";
+
+import DesignSystemPalette from "../components/DesignSystemPalette";
+import GradientColor from "../components/GradientColor";
+
+<Meta title="Semantics/Colors" />
+
+# Colors
+
+## Background
+
+<DesignSystemPalette
+  name="Neutral"
+  colors={Object.keys(tokens.color.semantic)
+    .filter((colorKey) => colorKey.startsWith("neutral"))
+    .reduce((acc, colorKey) => {
+      acc[colorKey] = tokens.color.semantic[colorKey];
+      return acc;
+    }, {})}
+/>
+
+<DesignSystemPalette
+  name="Negative"
+  colors={Object.keys(tokens.color.semantic)
+    .filter((colorKey) => colorKey.startsWith("negative"))
+    .reduce((acc, colorKey) => {
+      acc[colorKey] = tokens.color.semantic[colorKey];
+      return acc;
+    }, {})}
+/>
+
+<DesignSystemPalette
+  name="Information"
+  colors={Object.keys(tokens.color.semantic)
+    .filter((colorKey) => colorKey.startsWith("information"))
+    .reduce((acc, colorKey) => {
+      acc[colorKey] = tokens.color.semantic[colorKey];
+      return acc;
+    }, {})}
+/>
+
+<DesignSystemPalette
+  name="Attention"
+  colors={Object.keys(tokens.color.semantic)
+    .filter((colorKey) => colorKey.startsWith("attention"))
+    .reduce((acc, colorKey) => {
+      acc[colorKey] = tokens.color.semantic[colorKey];
+      return acc;
+    }, {})}
+/>
+
+<DesignSystemPalette
+  name="Attention"
+  colors={Object.keys(tokens.color.semantic)
+    .filter((colorKey) => colorKey.startsWith("positive"))
+    .reduce((acc, colorKey) => {
+      acc[colorKey] = tokens.color.semantic[colorKey];
+      return acc;
+    }, {})}
+/>
+
+## Canvas
+
+<DesignSystemPalette
+  name="Canvas"
+  colors={Object.keys(tokens.color.semantic)
+    .filter((colorKey) => colorKey.startsWith("canvas"))
+    .reduce((acc, colorKey) => {
+      acc[colorKey] = tokens.color.semantic[colorKey];
+      return acc;
+    }, {})}
+/>
+
+## Text & Icon
+
+<DesignSystemPalette
+  name="Text"
+  colors={Object.keys(tokens.color.semantic)
+    .filter((colorKey) => colorKey.startsWith("text"))
+    .reduce((acc, colorKey) => {
+      acc[colorKey] = tokens.color.semantic[colorKey];
+      return acc;
+    }, {})}
+/>
+
+## Border
+
+<DesignSystemPalette
+  name="Border"
+  colors={Object.keys(tokens.color.semantic)
+    .filter((colorKey) => colorKey.startsWith("border"))
+    .reduce((acc, colorKey) => {
+      acc[colorKey] = tokens.color.semantic[colorKey];
+      return acc;
+    }, {})}
+/>
