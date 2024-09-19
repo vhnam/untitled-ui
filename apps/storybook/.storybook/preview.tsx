@@ -21,6 +21,14 @@ const preview: Preview = {
       </div>
     ),
   ],
+  parameters: {
+    options: {
+      storySort: {
+        method: "alphabetical",
+        order: ["Foundations", "Components"],
+      },
+    },
+  },
 };
 
 export default preview;
