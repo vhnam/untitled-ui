@@ -19,7 +19,7 @@ const DesignSystemPalette = ({ name, colors }: IProps) => {
             <Card
               lead={color}
               title="Color"
-              content={colors[color].toUpperCase()}
+              content={colors[color]}
               leading={
                 <div
                   className={styles.preview}

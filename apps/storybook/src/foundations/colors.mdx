@@ -30,7 +30,26 @@ import GradientColor from "../components/GradientColor";
 
 ## Gradient
 
-<DesignSystemPalette name="Gradient" colors={tokens.color.gradient} />
+### Psychology
+
+<DesignSystemPalette
+  name="Psychology"
+  colors={tokens.color.gradient.psychology.map((color) => color.value)}
+/>
+
+### Biology
+
+<DesignSystemPalette
+  name="Biology"
+  colors={tokens.color.gradient.biology.map((color) => color.value)}
+/>
+
+### Social
+
+<DesignSystemPalette
+  name="Social"
+  colors={tokens.color.gradient.social.map((color) => color.value)}
+/>
 
 <div style={{
   display: 'grid',
@@ -40,24 +59,14 @@ import GradientColor from "../components/GradientColor";
 <div>
 ### Blue
 
-<GradientColor colors={[
-  tokens.color.gradient.psychology01,
-  tokens.color.gradient.psychology02,
-  tokens.color.gradient.psychology03,
-  tokens.color.gradient.psychology04
-]} />
+<GradientColor colors={tokens.color.gradient.psychology.map((color) => color.value)} />
 </div>
 
 <div>
 ### Green
 
 <GradientColor
-  colors={[
-    tokens.color.gradient.biology01,
-    tokens.color.gradient.biology02,
-    tokens.color.gradient.biology03,
-    tokens.color.gradient.biology04,
-  ]}
+  colors={tokens.color.gradient.biology.map((color) => color.value)}
 />
 
 </div>
@@ -65,12 +74,7 @@ import GradientColor from "../components/GradientColor";
 <div>
 ### Red
 
-<GradientColor colors={[
-  tokens.color.gradient.social01,
-  tokens.color.gradient.social02,
-  tokens.color.gradient.social03,
-  tokens.color.gradient.social04
-]} />
+<GradientColor colors={tokens.color.gradient.social.map((color) => color.value)} />
 </div>
 
 </div>
