@@ -23,7 +23,7 @@ const Elevation = ({ value }: IProps) => {
   const boxShadow = value
     .map(
       ({ x, y, blur, spread, color }: ElevationType) =>
-        `${x}px ${y}px ${blur}px ${spread}px ${argb2rgba(color)}`
+        `${x}px ${y}px ${blur}px ${spread}px ${argb2rgba(color)}`,
     )
     .join(", ");
 

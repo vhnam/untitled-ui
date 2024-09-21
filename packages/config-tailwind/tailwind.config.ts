@@ -23,7 +23,7 @@ const config: Omit<Config, "content"> = {
           `${tokens.fontSize[fontSizeKey as FontSizeKey]}px`;
         return acc;
       },
-      {} as Record<FontSizeKey, string>
+      {} as Record<FontSizeKey, string>,
     ),
     fontWeight: Object.keys(tokens.fontWeight).reduce(
       (acc, fontWeightKey) => {
@@ -31,7 +31,7 @@ const config: Omit<Config, "content"> = {
           tokens.fontWeight[fontWeightKey as FontWeightKey];
         return acc;
       },
-      {} as Record<FontWeightKey, string>
+      {} as Record<FontWeightKey, string>,
     ),
     lineHeight: Object.keys(tokens.lineHeight).reduce(
       (acc, lineHeightKey) => {
@@ -39,7 +39,7 @@ const config: Omit<Config, "content"> = {
           `${tokens.lineHeight[lineHeightKey as LineHeightKey]}px`;
         return acc;
       },
-      {} as Record<LineHeightKey, string>
+      {} as Record<LineHeightKey, string>,
     ),
     letterSpacing: Object.keys(tokens.letterSpacing).reduce(
       (acc, letterSpacingKey) => {
@@ -47,7 +47,7 @@ const config: Omit<Config, "content"> = {
           `${tokens.letterSpacing[letterSpacingKey as LetterSpacingKey]}px`;
         return acc;
       },
-      {} as Record<LetterSpacingKey, string>
+      {} as Record<LetterSpacingKey, string>,
     ),
     borderRadius: Object.keys(tokens.radius).reduce(
       (acc, radiusKey) => {
@@ -55,7 +55,7 @@ const config: Omit<Config, "content"> = {
           `${tokens.radius[radiusKey as RadiusKey]}px`;
         return acc;
       },
-      {} as Record<RadiusKey, string>
+      {} as Record<RadiusKey, string>,
     ),
     borderWidth: Object.keys(tokens.borderWidth).reduce(
       (acc, borderWidthKey) => {
@@ -63,7 +63,7 @@ const config: Omit<Config, "content"> = {
           `${tokens.borderWidth[borderWidthKey as BorderWidthKey]}px`;
         return acc;
       },
-      {} as Record<BorderWidthKey, string>
+      {} as Record<BorderWidthKey, string>,
     ),
     extend: {
       spacing: Object.keys(tokens.spacing).reduce(
@@ -72,7 +72,7 @@ const config: Omit<Config, "content"> = {
             `${tokens.spacing[spacingKey as SpacingKey]}px`;
           return acc;
         },
-        {} as Record<SpacingKey, string>
+        {} as Record<SpacingKey, string>,
       ),
     },
   },

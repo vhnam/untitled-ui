@@ -1,6 +1,6 @@
 import { Button, type ButtonProps } from "@repo/ui";
 import type { Meta, StoryObj } from "@storybook/react";
-import outdent from 'outdent';
+import outdent from "outdent";
 
 const meta = {
   title: "Components/Button",
@@ -22,25 +22,25 @@ export default meta;
 type Story = StoryObj<ButtonProps>;
 
 export const Default = {
-  name: 'Default',
+  name: "Default",
   args: {
     children: "Button",
-    variant: 'default'
-  }  
+    variant: "default",
+  },
 } satisfies Story;
 
 export const Positive = {
-  name: 'Positive',
+  name: "Positive",
   args: {
     children: "Button",
-    variant: 'positive'
-  }  
+    variant: "positive",
+  },
 } satisfies Story;
 
 export const Negative = {
-  name: 'Negative',
+  name: "Negative",
   args: {
     children: "Button",
-    variant: 'negative'
-  }  
+    variant: "negative",
+  },
 } satisfies Story;

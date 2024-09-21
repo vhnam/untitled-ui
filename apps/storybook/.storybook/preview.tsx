@@ -15,10 +15,10 @@ const preview: Preview = {
     (Story) => (
       <Unstyled>
         <div className={GeistSans.className}>
-          <Story/>
+          <Story />
         </div>
       </Unstyled>
-    )
+    ),
   ],
   parameters: {
     docs: {

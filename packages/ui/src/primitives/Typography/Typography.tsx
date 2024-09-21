@@ -9,12 +9,13 @@ export interface TypographyProps extends PropsWithChildren {
 
 const Typography = ({ children, variant, weight }: TypographyProps) => {
   return (
-    <div className={cn( variant,{
-      ['font-light']: weight === 'light',
-      ['font-regular']: weight === 'regular',
-      ['font-medium']: weight === 'medium',
-      ['font-semiBold']: weight === 'semiBold',
-    })}
+    <div
+      className={cn(variant, {
+        ["font-light"]: weight === "light",
+        ["font-regular"]: weight === "regular",
+        ["font-medium"]: weight === "medium",
+        ["font-semiBold"]: weight === "semiBold",
+      })}
     >
       {children}
     </div>

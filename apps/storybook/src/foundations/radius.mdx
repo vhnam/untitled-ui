@@ -1,18 +1,19 @@
 import { Meta, Source } from "@storybook/blocks";
 import tokens from "@repo/design-tokens";
 
-import Card from '../components/Card';
+import Card from "../components/Card";
 
 <Meta title="Foundations/Radius" />
 
 # Radius
 
-<div style={{
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
-  gap: '1rem'
-}}>
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "1rem",
+  }}
+>
   <Card lead="xsmall" title="Integer" content={tokens.radius.xsmall} />
   <Card lead="full" title="Integer" content={tokens.radius.full} />
 </div>
-

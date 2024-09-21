@@ -8,7 +8,7 @@ interface IProps {
 
 const GradientColor = ({ colors }: IProps) => {
   const internalColors = [0, 33, 66, 100].map(
-    (percentage, index) => `${colors[index]} ${percentage}%`
+    (percentage, index) => `${colors[index]} ${percentage}%`,
   );
 
   return (
