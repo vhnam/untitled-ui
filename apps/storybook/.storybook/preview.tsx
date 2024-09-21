@@ -40,7 +40,7 @@ const preview: Preview = {
             "Colors",
             "Elevation",
             "Icons",
-            ["Overview", "*"],
+            ["Overview", "Icons", "*"],
             "*",
           ],
           "Semantics",

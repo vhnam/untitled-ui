@@ -1,11 +1,11 @@
-import { Icon, IconName } from "@repo/icons";
+import { Icon, type IconNameType } from "@repo/icons";
 import { Button, type ButtonProps } from "../Button";
 
 import { cn } from "../../utils/cn";
 
 export interface IconButtonProps
   extends Pick<ButtonProps, "disabled" | "htmlType" | "size"> {
-  iconName: IconName;
+  iconName: IconNameType;
   variant?: "default" | "negative";
 }
 
@@ -15,7 +15,7 @@ const IconButton = ({
   ...props
 }: IconButtonProps) => {
   return (
-    <Button type="secondary" variant={variant} {...props}>
+    <Button type="secondary" variant={variant} size="small" {...props}>
       <Icon name={iconName} />
     </Button>
   );

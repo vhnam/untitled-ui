@@ -1,7 +1,9 @@
-import { Meta, Source } from "@storybook/blocks";
+import { Canvas, Meta, Source } from "@storybook/blocks";
 import tokens from "@repo/design-tokens";
 
 import Card from "../../components/Card";
+
+import * as IconsStories from "./Icons.stories";
 
 <Meta title="Foundations/Icons/Icons" />
 
@@ -20,3 +22,7 @@ const MyComponent = () => {
   return <Icon name="ArrowForwared" className="text-red-700" />;
 };
 ```
+
+## All Icons
+
+<Canvas of={IconsStories.All} />
