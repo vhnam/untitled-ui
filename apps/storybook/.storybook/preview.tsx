@@ -11,6 +11,15 @@ const GeistSans = localFont({
 });
 
 const preview: Preview = {
+  decorators: [
+    (Story) => (
+      <Unstyled>
+        <div className={GeistSans.className}>
+          <Story/>
+        </div>
+      </Unstyled>
+    )
+  ],
   parameters: {
     docs: {
       container: ({ children, context }) => (

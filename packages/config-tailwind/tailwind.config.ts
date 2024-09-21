@@ -6,11 +6,13 @@ type FontWeightKey = keyof typeof tokens.fontWeight;
 type LineHeightKey = keyof typeof tokens.lineHeight;
 type LetterSpacingKey = keyof typeof tokens.letterSpacing;
 type SpacingKey = keyof typeof tokens.spacing;
+type RadiusKey = keyof typeof tokens.radius;
+type BorderWidthKey = keyof typeof tokens.borderWidth;
 
 // We want each package to be responsible for its own content.
 const config: Omit<Config, "content"> = {
   theme: {
-    colors: tokens.color,
+    colors: { ...tokens.color, ...tokens.color.semantic },
     fontFamily: {
       sans: [tokens.fontFamily.text],
       mono: [tokens.fontFamily.text],
@@ -47,14 +49,32 @@ const config: Omit<Config, "content"> = {
       },
       {} as Record<LetterSpacingKey, string>
     ),
-    spacing: Object.keys(tokens.letterSpacing).reduce(
-      (acc, spacingKey) => {
-        acc[spacingKey as SpacingKey] =
-          `${tokens.spacing[spacingKey as SpacingKey]}px`;
+    borderRadius: Object.keys(tokens.radius).reduce(
+      (acc, radiusKey) => {
+        acc[radiusKey as RadiusKey] =
+          `${tokens.radius[radiusKey as RadiusKey]}px`;
         return acc;
       },
-      {} as Record<SpacingKey, string>
+      {} as Record<RadiusKey, string>
     ),
+    borderWidth: Object.keys(tokens.borderWidth).reduce(
+      (acc, borderWidthKey) => {
+        acc[borderWidthKey as BorderWidthKey] =
+          `${tokens.borderWidth[borderWidthKey as BorderWidthKey]}px`;
+        return acc;
+      },
+      {} as Record<BorderWidthKey, string>
+    ),
+    extend: {
+      spacing: Object.keys(tokens.spacing).reduce(
+        (acc, spacingKey) => {
+          acc[spacingKey as SpacingKey] =
+            `${tokens.spacing[spacingKey as SpacingKey]}px`;
+          return acc;
+        },
+        {} as Record<SpacingKey, string>
+      ),
+    },
   },
   plugins: [],
 };

@@ -1,4 +1,4 @@
-export { Button } from "./components/Button";
+export { Button, type ButtonProps } from "./components/Button";
 
 export { Typography } from "./primitives/Typography";
 

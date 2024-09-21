@@ -1,3 +1,134 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+  /* Typography */
+
+  .display {
+    @apply text-30 tracking-xdense leading-36;
+  }
+
+  .h1 {
+    @apply text-20 tracking-xdense leading-24;
+  }
+
+  .h2 {
+    @apply text-16 tracking-dense leading-20;
+  }
+
+  .h3,
+  .paragraph {
+    @apply text-16 tracking-dense leading-20;
+  }
+
+  .label {
+    @apply text-11 tracking-normal leading-12;
+  }
+
+  /* Button */
+  
+  .btn {
+    @apply relative inline-flex h2 p-small font-semiBold gap-xxsmall rounded-full;
+
+    &:focus::after {
+      content: "";
+      @apply absolute top-[-0.25rem] bottom-[-0.25rem] left-[-0.25rem] right-[-0.25rem] rounded-full border-medium border-solid border-canvasBolder;
+    }
+  }
+
+  .btn__default {
+    &.btn--primary {
+      @apply bg-canvasBolder text-neutralSubtle;
+    }
+  
+    &.btn--primary:not(:disabled):active {
+      @apply bg-neutralBoldPressed;
+    }
+  
+    &.btn--primary:focus::after {
+      @apply border-canvasBolder;
+    }
+    
+    &.btn--secondary {
+      @apply bg-neutralSubtle text-textNeutralBolder;
+    }
+  
+    &.btn--secondary:active {
+      @apply bg-neutralSubtle text-textNeutralBold;
+    }
+
+    &.btn--tertiary {
+      @apply text-textNeutralBolder;
+    }
+
+    &.btn--tertiary:active {
+      @apply text-textNeutralBold;
+    }
+
+    &:disabled {
+      @apply bg-neutralSubtle text-textNeutralDisabled;
+    }
+  }
+
+  .btn__positive {
+    &.btn--primary {
+      @apply bg-positiveBold text-neutralSubtle;
+    }
+  
+    &.btn--primary:not(:disabled):active {
+      @apply bg-positiveBoldPressed;
+    }
+  
+    &.btn--secondary {
+      @apply bg-neutralSubtle text-textPositiveBold;
+    }
+  
+    &.btn--secondary:active {
+      @apply bg-neutralSubtle text-textPositiveBolder;
+    }
+
+    &.btn--tertiary {
+      @apply text-textPositiveBold;
+    }
+
+    &.btn--tertiary:active {
+      @apply text-textPositiveBolder;
+    }
+
+    &:disabled {
+      @apply bg-positiveSubtle text-textPositiveDisabled;
+    }
+  }
+
+  .btn__negative {
+    &.btn--primary {
+      @apply bg-negativeBold text-neutralSubtle;
+    }
+  
+    &.btn--primary:not(:disabled):active {
+      @apply bg-negativeBoldPressed;
+    }
+  
+    &.btn--secondary {
+      @apply bg-neutralSubtle text-textNegativeBold;
+    }
+  
+    &.btn--secondary:active {
+      @apply bg-neutralSubtle text-textNegativeBolder;
+    }
+
+    &.btn--tertiary {
+      @apply text-textNegativeBold;
+    }
+
+    &.btn--tertiary:active {
+      @apply text-textNegativeBolder;
+    }
+
+    &:disabled {
+      @apply bg-negativeSubtle text-textNegativeDisabled;
+    }
+  }
+}
