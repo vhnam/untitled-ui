@@ -1,0 +1,22 @@
+import { Meta, Source } from "@storybook/blocks";
+import tokens from "@repo/design-tokens";
+
+import Card from "../../components/Card";
+
+<Meta title="Foundations/Icons/Icons" />
+
+# Icons
+
+They by default, do not have a `width` or `height` set, but the default viewBox is set to `0 0 20 20` which means they
+will scale to fit the parent container whatever that may be. The default `fill` is `currentColor` meaning they will
+inherit the `color` of the parent container. It's not advised to overwrite the `viewBox` property.
+
+## Usage
+
+```tsx
+import { Icon } from "@repo/ui";
+
+const MyComponent = () => {
+  return <Icon name="ArrowForwared" className="text-red-700" />;
+};
+```

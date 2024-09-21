@@ -1,11 +1,14 @@
-import { SVGProps } from "react";
+import { forwardRef, Ref, SVGProps } from "react";
 
-const ArrowForward = (props: SVGProps<SVGSVGElement>) => (
+const ArrowForward = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>,
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={20}
     height={20}
-    fill="none"
+    ref={ref}
     {...props}
   >
     <path
@@ -15,4 +18,5 @@ const ArrowForward = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export default ArrowForward;
+const ForwardRef = forwardRef(ArrowForward);
+export default ForwardRef;

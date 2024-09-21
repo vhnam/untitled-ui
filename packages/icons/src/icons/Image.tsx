@@ -1,11 +1,11 @@
-import { SVGProps } from "react";
+import { forwardRef, Ref, SVGProps } from "react";
 
-const Image = (props: SVGProps<SVGSVGElement>) => (
+const Image = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={20}
     height={20}
-    fill="none"
+    ref={ref}
     {...props}
   >
     <path
@@ -15,4 +15,5 @@ const Image = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export default Image;
+const ForwardRef = forwardRef(Image);
+export default ForwardRef;
