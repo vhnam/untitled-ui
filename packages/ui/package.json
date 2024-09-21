@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
+    "@repo/icons": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
     "@types/react": "^18.2.61",

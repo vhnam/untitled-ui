@@ -18,9 +18,12 @@
     @apply text-16 tracking-dense leading-20;
   }
 
-  .h3,
+  .h3 {
+    @apply text-14 tracking-dense leading-16;
+  }
+
   .paragraph {
-    @apply text-16 tracking-dense leading-20;
+    @apply text-14 tracking-dense leading-16;
   }
 
   .label {
@@ -130,5 +133,9 @@
     &:disabled {
       @apply bg-negativeSubtle text-textNegativeDisabled;
     }
+  }
+
+  .btn--small {
+    @apply p-xxsmall h3 gap-xxxsmall leading-20;
   }
 }

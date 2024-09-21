@@ -1,3 +1,4 @@
+import { Icon } from "@repo/icons";
 import { Button, type ButtonProps } from "@repo/ui";
 import type { Meta, StoryObj } from "@storybook/react";
 import outdent from "outdent";
@@ -44,3 +45,19 @@ export const Negative = {
     variant: "negative",
   },
 } satisfies Story;
+
+export const LeadingIcon = {
+  name: "With Leading Icon",
+  args: {
+    children: "Button",
+    leadingIcon: <Icon name="Image" />,
+  },
+};
+
+export const TrailingIcon = {
+  name: "With Trailing Icon",
+  args: {
+    children: "Button",
+    trailingIcon: <Icon name="ArrowForward" />,
+  },
+};
