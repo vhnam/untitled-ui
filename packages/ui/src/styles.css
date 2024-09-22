@@ -30,6 +30,60 @@
     @apply text-11 tracking-normal leading-12;
   }
 
+  /* Badge */
+
+  .badge {
+    @apply inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall;
+  }
+
+  .badge__low {
+    &.badge--neutral {
+      @apply bg-neutralSubtle text-textNeutralBolder;
+    }
+
+    &.badge--negative {
+      @apply bg-negativeSubtle text-textNegativeBolder;
+    }
+
+    &.badge--attention {
+      @apply bg-attentionSubtle text-textAttentionBolder;
+    }
+
+    &.badge--positive {
+      @apply bg-positiveSubtle text-textPositiveBolder;
+    }
+
+    &.badge--informative {
+      @apply bg-informationSubtle text-textInformationBolder;
+    }
+  }
+
+  .badge__high{
+    &.badge--neutral {
+      @apply bg-neutralBold text-textNeutralSubtle;
+    }
+
+    &.badge--negative {
+      @apply bg-negativeBold text-textNeutralSubtle;
+    }
+
+    &.badge--attention {
+      @apply bg-attentionBold text-textNeutralSubtle;
+    }
+
+    &.badge--positive {
+      @apply bg-positiveBold text-textNeutralSubtle;
+    }
+
+    &.badge--informative {
+      @apply bg-informationBold text-textNeutralSubtle;
+    }
+  }
+
+  .badge--small {
+    @apply label font-medium;
+  }
+
   /* Button */
   
   .btn {

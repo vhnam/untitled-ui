@@ -2989,7 +2989,7 @@
       }
     }
   },
-  "chip": {
+  "badge": {
     "labelOnly": {
       "container": {
         "inactive": {

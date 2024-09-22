@@ -1,0 +1,33 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import { Badge } from "@repo/ui";
+
+import * as BadgeStories from "./Badge.stories";
+
+<Meta of={BadgeStories} />
+
+# Badge
+
+- [Overview](#overview)
+- [Usage](#usage)
+
+## Overview
+
+Badges are used to give a quick visual indication to the users.
+
+**Best practices**
+
+- Badge component should be filled only with numbers or a single word max.
+- Use them next to a label or a description.
+- Use the active state only with a label.
+- Use Tag component if the information given needs to be related to a performed action.
+
+## Imports
+
+```js
+import { Badge } from "@repo/ui";
+```
+
+## Usage
+
+Badges are used to give a quick and short scannable information to the users. They are mostly filled with numbers or a
+single word.
