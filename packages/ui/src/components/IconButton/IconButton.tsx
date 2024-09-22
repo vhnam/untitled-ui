@@ -1,11 +1,9 @@
-import { Icon, type IconNameType } from "@repo/icons";
+import { Icon, type IconName } from "@repo/icons";
 import { Button, type ButtonProps } from "../Button";
 
-import { cn } from "../../utils/cn";
-
 export interface IconButtonProps
-  extends Pick<ButtonProps, "disabled" | "htmlType" | "size"> {
-  iconName: IconNameType;
+  extends Pick<ButtonProps, "disabled" | "htmlType"> {
+  iconName: IconName;
   variant?: "default" | "negative";
 }
 
