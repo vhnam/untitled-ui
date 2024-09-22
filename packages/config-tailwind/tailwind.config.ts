@@ -66,6 +66,9 @@ const config: Omit<Config, "content"> = {
       {} as Record<BorderWidthKey, string>,
     ),
     extend: {
+      content: {
+        empty: '""',
+      },
       spacing: Object.keys(tokens.spacing).reduce(
         (acc, spacingKey) => {
           acc[spacingKey as SpacingKey] =

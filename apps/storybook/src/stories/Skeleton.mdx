@@ -1,0 +1,27 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import { Skeleton } from "@repo/ui";
+
+import * as SkeletonStories from "./Skeleton.stories";
+
+<Meta of={SkeletonStories} />
+
+# Skeleton
+
+- [Overview](#overview)
+- [Usage](#usage)
+
+## Overview
+
+Display a placeholder preview of your content before the data gets loaded to reduce load-time frustration.
+
+## Imports
+
+```js
+import { Skeleton } from "@repo/ui";
+```
+
+## Usage
+
+- Use a skeleton the first time a user waits for content to load.
+- Skeletons work well when the wait times are short and the content is predictable.
+- They're also helpful when some parts of the screen are already available (cached) from a previous session, and the other parts still need to load. This allows users to begin reading content until the rest is available.

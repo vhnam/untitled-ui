@@ -46,8 +46,7 @@
     @apply relative inline-flex h2 p-small font-semiBold gap-xxsmall rounded-full;
 
     &:focus::after {
-      content: "";
-      @apply absolute top-[-0.25rem] bottom-[-0.25rem] left-[-0.25rem] right-[-0.25rem] rounded-full border-medium border-solid border-canvasBolder;
+      @apply content-empty absolute top-[-0.25rem] bottom-[-0.25rem] left-[-0.25rem] right-[-0.25rem] rounded-full border-medium border-solid border-canvasBolder;
     }
   }
 
@@ -147,6 +146,114 @@
 
   .btn--small {
     @apply p-xxsmall h3 gap-xxxsmall leading-20;
+  }
+
+  /* Skeleton */
+
+  @keyframes gradient {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .skeleton {
+    @apply relative block py-0 bg-neutral-100 rounded-xsmall origin-left overflow-hidden;
+
+    &::before {
+      @apply content-empty
+    }
+
+    &::after {
+      @apply content-empty absolute top-0 bottom-0 inset-0 translate-x-[-100%];
+      background-image: linear-gradient(89.76deg, #F5F5F4 0%, #E7E5E4 50%, #F5F5F4 100%);
+      animation: 2s linear 0.5s infinite normal none running gradient;
+    }
+  }
+
+  .skeleton__text {
+    @apply w-full rounded-xsmall;
+
+    &.skeleton__text--20 {
+      @apply h-[20px];
+    }
+
+    &.skeleton__text--16 {
+      @apply h-[16px];
+    }
+
+    &.skeleton__text--14 {
+      @apply h-[14px];
+    }
+
+    &.skeleton__text--11 {
+      @apply h-[11px];
+    }
+  }
+
+  .skeleton__circle {
+    @apply rounded-full;
+
+    &.skeleton__circle--xlarge {
+      @apply size-[128px];
+    }
+
+    &.skeleton__circle--large {
+      @apply size-[72px];
+    }
+
+    &.skeleton__circle--medium {
+      @apply size-[48px];
+    }
+
+    &.skeleton__circle--small {
+      @apply size-[32px];
+    }
+  }
+
+  .skeleton__square {
+    @apply rounded-xsmall;
+
+    &.skeleton__square--xlarge {
+      @apply size-[128px];
+    }
+
+    &.skeleton__square--large {
+      @apply size-[72px];
+    }
+
+    &.skeleton__square--medium {
+      @apply size-[48px];
+    }
+
+    &.skeleton__square--small {
+      @apply size-[32px];
+    }
+  }
+
+  .skeleton__rectangle {
+    @apply rounded-xsmall;
+
+    &.skeleton__rectangle--xlarge {
+      @apply w-[128px] h-[calc(128px/1.5)];
+    }
+
+    &.skeleton__rectangle--large {
+      @apply w-[72px] h-[48px];
+    }
+
+    &.skeleton__rectangle--medium {
+      @apply w-[48px] h-[32px];
+    }
+
+    &.skeleton__rectangle--small {
+      @apply w-[32px] h-[calc(32px/1.5)];
+    }
   }
 
   /* Tag */
