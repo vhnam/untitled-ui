@@ -30,58 +30,14 @@
     @apply text-11 tracking-normal leading-12;
   }
 
-  /* Tag */
+  /* Badge */
 
-  .tag {
-    @apply relative inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall; 
+  .badge {
+    @apply relative inline-flex;
   }
 
-  .tag__low {
-    &.tag--neutral {
-      @apply bg-neutralSubtle text-textNeutralBolder;
-    }
-
-    &.tag--negative {
-      @apply bg-negativeSubtle text-textNegativeBolder;
-    }
-
-    &.tag--attention {
-      @apply bg-attentionSubtle text-textAttentionBolder;
-    }
-
-    &.tag--positive {
-      @apply bg-positiveSubtle text-textPositiveBolder;
-    }
-
-    &.tag--informative {
-      @apply bg-informationSubtle text-textInformationBolder;
-    }
-  }
-
-  .tag__high{
-    &.tag--neutral {
-      @apply bg-neutralBold text-textNeutralSubtle;
-    }
-
-    &.tag--negative {
-      @apply bg-negativeBold text-textNeutralSubtle;
-    }
-
-    &.tag--attention {
-      @apply bg-attentionBold text-textNeutralSubtle;
-    }
-
-    &.tag--positive {
-      @apply bg-positiveBold text-textNeutralSubtle;
-    }
-
-    &.tag--informative {
-      @apply bg-informationBold text-textNeutralSubtle;
-    }
-  }
-
-  .tag--small {
-    @apply label font-medium;
+  .badge__content {
+    @apply absolute top-0 right-0 px-xxxsmall py-[0.125rem] min-w-xxsmall min-h-xxsmall label font-medium text-textNeutralSubtle bg-negativeBold rounded-full translate-x-2/4 translate-y-[-50%] origin-top-right scale-100 z-10;
   }
 
   /* Button */
@@ -191,5 +147,59 @@
 
   .btn--small {
     @apply p-xxsmall h3 gap-xxxsmall leading-20;
+  }
+
+  /* Tag */
+
+  .tag {
+    @apply relative inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall; 
+  }
+
+  .tag__low {
+    &.tag--neutral {
+      @apply bg-neutralSubtle text-textNeutralBolder;
+    }
+
+    &.tag--negative {
+      @apply bg-negativeSubtle text-textNegativeBolder;
+    }
+
+    &.tag--attention {
+      @apply bg-attentionSubtle text-textAttentionBolder;
+    }
+
+    &.tag--positive {
+      @apply bg-positiveSubtle text-textPositiveBolder;
+    }
+
+    &.tag--informative {
+      @apply bg-informationSubtle text-textInformationBolder;
+    }
+  }
+
+  .tag__high{
+    &.tag--neutral {
+      @apply bg-neutralBold text-textNeutralSubtle;
+    }
+
+    &.tag--negative {
+      @apply bg-negativeBold text-textNeutralSubtle;
+    }
+
+    &.tag--attention {
+      @apply bg-attentionBold text-textNeutralSubtle;
+    }
+
+    &.tag--positive {
+      @apply bg-positiveBold text-textNeutralSubtle;
+    }
+
+    &.tag--informative {
+      @apply bg-informationBold text-textNeutralSubtle;
+    }
+  }
+
+  .tag--small {
+    @apply label font-medium;
   }
 }
