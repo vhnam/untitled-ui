@@ -1,9 +1,9 @@
 import * as Icons from "../../icons";
 
-export type IconNameType = keyof typeof Icons;
+export type IconName = keyof typeof Icons;
 
 export interface IconProps {
-  name: IconNameType;
+  name: IconName;
 }
 
 const Icon = ({ name }: IconProps) => {

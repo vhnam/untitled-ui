@@ -1,5 +1,7 @@
-import { Icon, IconName, type IconProps } from "@repo/icons";
+import { Icon, type IconProps } from "@repo/icons";
 import type { Meta } from "@storybook/react";
+
+import { IconNames } from "./Icons.mock";
 
 const meta = {
   title: "Foundations/Icons/All",
@@ -19,7 +21,7 @@ export const All = () => (
       gap: "1rem",
     }}
   >
-    {IconName.map((iconName) => (
+    {IconNames.map((iconName) => (
       <div
         key={iconName}
         style={{
