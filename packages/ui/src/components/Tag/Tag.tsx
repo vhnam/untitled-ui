@@ -3,44 +3,43 @@ import { PropsWithChildren } from "react";
 
 import { cn } from "../../utils/cn";
 
-export interface BadgeProps extends PropsWithChildren {
+export interface TagProps extends PropsWithChildren {
   contrast?: "low" | "high";
   icon?: IconName;
   size?: "large" | "small";
   variant?: "neutral" | "negative" | "attention" | "positive" | "informative";
 }
 
-const Badge = ({
+const Tag = ({
   children,
   contrast = "low",
   icon,
   size = "large",
   variant = "neutral",
-}: BadgeProps) => {
+}: TagProps) => {
   return (
     <div
-      className={cn("badge", {
-        ["badge__low badge--neutral"]:
-          contrast === "low" && variant === "neutral",
-        ["badge__low badge--negative"]:
+      className={cn("tag", {
+        ["tag__low tag--neutral"]: contrast === "low" && variant === "neutral",
+        ["tag__low tag--negative"]:
           contrast === "low" && variant === "negative",
-        ["badge__low badge--attention"]:
+        ["tag__low tag--attention"]:
           contrast === "low" && variant === "attention",
-        ["badge__low badge--positive"]:
+        ["tag__low tag--positive"]:
           contrast === "low" && variant === "positive",
-        ["badge__low badge--informative"]:
+        ["tag__low tag--informative"]:
           contrast === "low" && variant === "informative",
-        ["badge__high badge--neutral"]:
+        ["tag__high tag--neutral"]:
           contrast === "high" && variant === "neutral",
-        ["badge__high badge--negative"]:
+        ["tag__high tag--negative"]:
           contrast === "high" && variant === "negative",
-        ["badge__high badge--attention"]:
+        ["tag__high tag--attention"]:
           contrast === "high" && variant === "attention",
-        ["badge__high badge--positive"]:
+        ["tag__high tag--positive"]:
           contrast === "high" && variant === "positive",
-        ["badge__high badge--informative"]:
+        ["tag__high tag--informative"]:
           contrast === "high" && variant === "informative",
-        ["badge--small"]: size === "small",
+        ["tag--small"]: size === "small",
       })}
     >
       {icon && (
@@ -55,4 +54,4 @@ const Badge = ({
   );
 };
 
-export default Badge;
+export default Tag;

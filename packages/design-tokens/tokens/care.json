@@ -2989,7 +2989,7 @@
       }
     }
   },
-  "badge": {
+  "tag": {
     "labelOnly": {
       "container": {
         "inactive": {
@@ -3221,7 +3221,7 @@
       }
     }
   },
-  "badge": {
+  "tag": {
     "large": {
       "lowContrast": {
         "container": {
@@ -3779,7 +3779,7 @@
       }
     }
   },
-  "notificationBadge": {
+  "notificationTag": {
     "container": {
       "counter": {
         "value": {

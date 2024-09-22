@@ -30,57 +30,57 @@
     @apply text-11 tracking-normal leading-12;
   }
 
-  /* Badge */
+  /* Tag */
 
-  .badge {
-    @apply inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall;
+  .tag {
+    @apply relative inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall; 
   }
 
-  .badge__low {
-    &.badge--neutral {
+  .tag__low {
+    &.tag--neutral {
       @apply bg-neutralSubtle text-textNeutralBolder;
     }
 
-    &.badge--negative {
+    &.tag--negative {
       @apply bg-negativeSubtle text-textNegativeBolder;
     }
 
-    &.badge--attention {
+    &.tag--attention {
       @apply bg-attentionSubtle text-textAttentionBolder;
     }
 
-    &.badge--positive {
+    &.tag--positive {
       @apply bg-positiveSubtle text-textPositiveBolder;
     }
 
-    &.badge--informative {
+    &.tag--informative {
       @apply bg-informationSubtle text-textInformationBolder;
     }
   }
 
-  .badge__high{
-    &.badge--neutral {
+  .tag__high{
+    &.tag--neutral {
       @apply bg-neutralBold text-textNeutralSubtle;
     }
 
-    &.badge--negative {
+    &.tag--negative {
       @apply bg-negativeBold text-textNeutralSubtle;
     }
 
-    &.badge--attention {
+    &.tag--attention {
       @apply bg-attentionBold text-textNeutralSubtle;
     }
 
-    &.badge--positive {
+    &.tag--positive {
       @apply bg-positiveBold text-textNeutralSubtle;
     }
 
-    &.badge--informative {
+    &.tag--informative {
       @apply bg-informationBold text-textNeutralSubtle;
     }
   }
 
-  .badge--small {
+  .tag--small {
     @apply label font-medium;
   }
 

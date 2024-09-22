@@ -1,37 +1,37 @@
-import { Badge, type BadgeProps } from "@repo/ui";
+import { Tag, type TagProps } from "@repo/ui";
 import type { Meta, StoryObj } from "@storybook/react";
 import outdent from "outdent";
 
 const meta = {
-  title: "Components/Badge",
-  component: Badge,
+  title: "Components/Tag",
+  component: Tag,
   parameters: {
     chromatic: { disableSnapshot: false },
     docs: {
       source: {
         code: outdent`
-          <Badge>Badge</Badge>
+          <Tag>Tag</Tag>
         `,
       },
     },
   },
-} satisfies Meta<BadgeProps>;
+} satisfies Meta<TagProps>;
 
 export default meta;
 
-type Story = StoryObj<BadgeProps>;
+type Story = StoryObj<TagProps>;
 
 export const Default = {
   name: "Default",
   args: {
-    children: "Badge",
+    children: "Tag",
   },
 } satisfies Story;
 
 export const SmallSize = {
   name: "Small Size",
   args: {
-    children: "Badge",
+    children: "Tag",
     size: "small",
   },
 } satisfies Story;
@@ -39,7 +39,7 @@ export const SmallSize = {
 export const WithIcon = {
   name: "With Icon",
   args: {
-    children: "Badge",
+    children: "Tag",
     icon: "CheckCircle",
   },
 } satisfies Story;

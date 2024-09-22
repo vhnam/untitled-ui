@@ -1,0 +1,34 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import { Tag } from "@repo/ui";
+
+import * as TagStories from "./Tag.stories";
+
+<Meta of={TagStories} />
+
+# Tag
+
+- [Overview](#overview)
+- [Usage](#usage)
+
+## Overview
+
+Tags are used to give a quick information about a performed action. Tags can be added or removed from a page or another
+component. They are also used as a filter.
+
+**Best practices**
+
+- Tags text should be concise and easily scannable.
+- Tags text should be explicit and indicate its purpose.
+- Tags should be very close to or within the performed action.
+- Use Badge component if the information given is not related to a performed action.
+
+## Imports
+
+```js
+import { Tag } from "@repo/ui";
+```
+
+## Usage
+
+Tags are used to give a quick and short scannable information to the users. They are mostly filled with numbers or a
+single word.
