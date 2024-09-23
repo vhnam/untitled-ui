@@ -324,4 +324,75 @@
   .care-tag--small {
     @apply label font-medium;
   }
+
+  /* TextInput */
+
+  .care-textInput {
+    /* @apply ; */
+  }
+
+  .care-textInput__container {
+    @apply relative flex gap-xxsmall pt-[28px] pb-[12px] px-small bg-neutralSubtle rounded-t-xsmall;
+
+    &::before {
+      @apply content-empty absolute left-0 bottom-0 w-full border-b-small border-solid border-textNeutralBold;
+    }
+  }
+
+  .care-textInput__label {
+    @apply absolute top-0 left-0 paragraph text-textNeutralBold translate-x-[16px] translate-y-[22px] z-10;
+    transition:
+      font-size 200ms cubic-bezier(0, 0, 0.2, 1),
+      font-line-height 200ms cubic-bezier(0, 0, 0.2, 1),
+      color 200ms cubic-bezier(0, 0, 0.2, 1),
+      transform 200ms cubic-bezier(0, 0, 0.2, 1),
+      max-width 200ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .care-textInput__input {
+    background-color: transparent;
+    @apply w-full paragraph text-textNeutralBolder outline-none;
+  }
+
+  .care-textInput__trailingIcon {
+    @apply text-textNeutralBolder;
+  }
+
+  .care-textInput__suffix {
+    @apply h3 font-semiBold leading-20 text-textNeutralBold;
+  }
+
+  .care-textInput__helperText {
+    @apply mt-xxsmall label font-medium;
+  }
+
+  .care-textInput__errorMessage {
+    @apply mt-xxsmall label font-medium text-textNegativeBold;
+  }
+
+  .care-textInput.care-textInput--focused {
+    .care-textInput__container::before {
+      @apply border-b-medium;
+    }
+
+    .care-textInput__label {
+      @apply label font-medium translate-y-[12px];
+    }
+  }
+
+  .care-textInput.care-textInput--error {
+    .care-textInput__label,
+    .care-textInput__errorMessage,
+    .care-textInput__trailingIcon {
+      @apply text-textNegativeBold;
+    }
+
+    .care-textInput__container::before {
+      @apply border-b-negativeBold;
+    }
+  }
+
+  .care-textInput.care-textInput--disabled {
+    @apply opacity-[0.38] cursor-default;
+  }
 }

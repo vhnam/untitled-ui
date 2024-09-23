@@ -8,7 +8,9 @@ export {
   type SkeletonProps,
 } from "./components/Skeleton";
 export { Tag, type TagProps } from "./components/Tag";
+export { TextInput, type TextInputProps } from "./components/TextInput";
 
 export { Typography } from "./primitives/Typography";
 
 export { cn } from "./utils/cn";
+export * from "./utils/common";
