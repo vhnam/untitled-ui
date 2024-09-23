@@ -37,7 +37,13 @@ const Elevation = ({ value }: IProps) => {
       >
         &nbsp;
       </div>
-      <code>box-shadow: {boxShadow}</code>
+      <p
+        style={{
+          fontSize: "14px",
+        }}
+      >
+        box-shadow: {boxShadow}
+      </p>
     </div>
   );
 };
