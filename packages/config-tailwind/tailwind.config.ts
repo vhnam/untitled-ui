@@ -14,8 +14,7 @@ const config: Omit<Config, "content"> = {
   theme: {
     colors: { ...tokens.color, ...tokens.color.semantic },
     fontFamily: {
-      sans: [tokens.fontFamily.text],
-      mono: [tokens.fontFamily.text],
+      sans: [tokens.fontFamily.text, "sans-serif"],
     },
     fontSize: Object.keys(tokens.fontSize).reduce(
       (acc, fontSizeKey) => {

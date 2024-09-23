@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+@layer base {
+  @font-face {
+    font-family: "geist";
+    src:
+      url("/fonts/geist-sans/Geist-Variable.woff2") format("woff2"),
+      url("/fonts/geist-sans/Geist-Variable.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
 
+@layer components {
   /* Typography */
 
   .display {
@@ -32,17 +42,17 @@
 
   /* Badge */
 
-  .badge {
+  .care-badge {
     @apply relative inline-flex;
   }
 
-  .badge__content {
+  .care-badge__content {
     @apply absolute top-0 right-0 px-xxxsmall py-[0.125rem] min-w-xxsmall min-h-xxsmall label font-medium text-textNeutralSubtle bg-negativeBold rounded-full translate-x-2/4 translate-y-[-50%] origin-top-right scale-100 z-10;
   }
 
   /* Button */
-  
-  .btn {
+
+  .care-button {
     @apply relative inline-flex h2 p-small font-semiBold gap-xxsmall rounded-full;
 
     &:focus::after {
@@ -50,32 +60,32 @@
     }
   }
 
-  .btn__default {
-    &.btn--primary {
+  .care-button__default {
+    &.care-button--primary {
       @apply bg-canvasBolder text-neutralSubtle;
     }
-  
-    &.btn--primary:not(:disabled):active {
+
+    &.care-button--primary:not(:disabled):active {
       @apply bg-neutralBoldPressed;
     }
-  
-    &.btn--primary:focus::after {
+
+    &.care-button--primary:focus::after {
       @apply border-canvasBolder;
     }
-    
-    &.btn--secondary {
+
+    &.care-button--secondary {
       @apply bg-neutralSubtle text-textNeutralBolder;
     }
-  
-    &.btn--secondary:active {
+
+    &.care-button--secondary:active {
       @apply bg-neutralSubtle text-textNeutralBold;
     }
 
-    &.btn--tertiary {
+    &.care-button--tertiary {
       @apply text-textNeutralBolder;
     }
 
-    &.btn--tertiary:active {
+    &.care-button--tertiary:active {
       @apply text-textNeutralBold;
     }
 
@@ -84,28 +94,28 @@
     }
   }
 
-  .btn__positive {
-    &.btn--primary {
+  .care-button__positive {
+    &.care-button--primary {
       @apply bg-positiveBold text-neutralSubtle;
     }
-  
-    &.btn--primary:not(:disabled):active {
+
+    &.care-button--primary:not(:disabled):active {
       @apply bg-positiveBoldPressed;
     }
-  
-    &.btn--secondary {
+
+    &.care-button--secondary {
       @apply bg-neutralSubtle text-textPositiveBold;
     }
-  
-    &.btn--secondary:active {
+
+    &.care-button--secondary:active {
       @apply bg-neutralSubtle text-textPositiveBolder;
     }
 
-    &.btn--tertiary {
+    &.care-button--tertiary {
       @apply text-textPositiveBold;
     }
 
-    &.btn--tertiary:active {
+    &.care-button--tertiary:active {
       @apply text-textPositiveBolder;
     }
 
@@ -114,28 +124,28 @@
     }
   }
 
-  .btn__negative {
-    &.btn--primary {
+  .care-button__negative {
+    &.care-button--primary {
       @apply bg-negativeBold text-neutralSubtle;
     }
-  
-    &.btn--primary:not(:disabled):active {
+
+    &.care-button--primary:not(:disabled):active {
       @apply bg-negativeBoldPressed;
     }
-  
-    &.btn--secondary {
+
+    &.care-button--secondary {
       @apply bg-neutralSubtle text-textNegativeBold;
     }
-  
-    &.btn--secondary:active {
+
+    &.care-button--secondary:active {
       @apply bg-neutralSubtle text-textNegativeBolder;
     }
 
-    &.btn--tertiary {
+    &.care-button--tertiary {
       @apply text-textNegativeBold;
     }
 
-    &.btn--tertiary:active {
+    &.care-button--tertiary:active {
       @apply text-textNegativeBolder;
     }
 
@@ -144,7 +154,7 @@
     }
   }
 
-  .btn--small {
+  .care-button--small {
     @apply p-xxsmall h3 gap-xxxsmall leading-20;
   }
 
@@ -162,151 +172,156 @@
     }
   }
 
-  .skeleton {
+  .care-skeleton {
     @apply relative block py-0 bg-neutral-100 rounded-xsmall origin-left overflow-hidden;
 
     &::before {
-      @apply content-empty
+      @apply content-empty;
     }
 
     &::after {
       @apply content-empty absolute top-0 bottom-0 inset-0 translate-x-[-100%];
-      background-image: linear-gradient(89.76deg, #F5F5F4 0%, #E7E5E4 50%, #F5F5F4 100%);
+      background-image: linear-gradient(
+        89.76deg,
+        #f5f5f4 0%,
+        #e7e5e4 50%,
+        #f5f5f4 100%
+      );
       animation: 2s linear 0.5s infinite normal none running gradient;
     }
   }
 
-  .skeleton__text {
+  .care-skeleton__text {
     @apply w-full rounded-xsmall;
 
-    &.skeleton__text--20 {
+    &.care-skeleton__text--20 {
       @apply h-[20px];
     }
 
-    &.skeleton__text--16 {
+    &.care-skeleton__text--16 {
       @apply h-[16px];
     }
 
-    &.skeleton__text--14 {
+    &.care-skeleton__text--14 {
       @apply h-[14px];
     }
 
-    &.skeleton__text--11 {
+    &.care-skeleton__text--11 {
       @apply h-[11px];
     }
   }
 
-  .skeleton__circle {
+  .care-skeleton__circle {
     @apply rounded-full;
 
-    &.skeleton__circle--xlarge {
+    &.care-skeleton__circle--xlarge {
       @apply size-[128px];
     }
 
-    &.skeleton__circle--large {
+    &.care-skeleton__circle--large {
       @apply size-[72px];
     }
 
-    &.skeleton__circle--medium {
+    &.care-skeleton__circle--medium {
       @apply size-[48px];
     }
 
-    &.skeleton__circle--small {
+    &.care-skeleton__circle--small {
       @apply size-[32px];
     }
   }
 
-  .skeleton__square {
+  .care-skeleton__square {
     @apply rounded-xsmall;
 
-    &.skeleton__square--xlarge {
+    &.care-skeleton__square--xlarge {
       @apply size-[128px];
     }
 
-    &.skeleton__square--large {
+    &.care-skeleton__square--large {
       @apply size-[72px];
     }
 
-    &.skeleton__square--medium {
+    &.care-skeleton__square--medium {
       @apply size-[48px];
     }
 
-    &.skeleton__square--small {
+    &.care-skeleton__square--small {
       @apply size-[32px];
     }
   }
 
-  .skeleton__rectangle {
+  .care-skeleton__rectangle {
     @apply rounded-xsmall;
 
-    &.skeleton__rectangle--xlarge {
+    &.care-skeleton__rectangle--xlarge {
       @apply w-[128px] h-[calc(128px/1.5)];
     }
 
-    &.skeleton__rectangle--large {
+    &.care-skeleton__rectangle--large {
       @apply w-[72px] h-[48px];
     }
 
-    &.skeleton__rectangle--medium {
+    &.care-skeleton__rectangle--medium {
       @apply w-[48px] h-[32px];
     }
 
-    &.skeleton__rectangle--small {
+    &.care-skeleton__rectangle--small {
       @apply w-[32px] h-[calc(32px/1.5)];
     }
   }
 
   /* Tag */
 
-  .tag {
-    @apply relative inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall; 
+  .care-tag {
+    @apply relative inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall;
   }
 
-  .tag__low {
-    &.tag--neutral {
+  .care-tag__low {
+    &.care-tag--neutral {
       @apply bg-neutralSubtle text-textNeutralBolder;
     }
 
-    &.tag--negative {
+    &.care-tag--negative {
       @apply bg-negativeSubtle text-textNegativeBolder;
     }
 
-    &.tag--attention {
+    &.care-tag--attention {
       @apply bg-attentionSubtle text-textAttentionBolder;
     }
 
-    &.tag--positive {
+    &.care-tag--positive {
       @apply bg-positiveSubtle text-textPositiveBolder;
     }
 
-    &.tag--informative {
+    &.care-tag--informative {
       @apply bg-informationSubtle text-textInformationBolder;
     }
   }
 
-  .tag__high{
-    &.tag--neutral {
+  .care-tag__high {
+    &.care-tag--neutral {
       @apply bg-neutralBold text-textNeutralSubtle;
     }
 
-    &.tag--negative {
+    &.care-tag--negative {
       @apply bg-negativeBold text-textNeutralSubtle;
     }
 
-    &.tag--attention {
+    &.care-tag--attention {
       @apply bg-attentionBold text-textNeutralSubtle;
     }
 
-    &.tag--positive {
+    &.care-tag--positive {
       @apply bg-positiveBold text-textNeutralSubtle;
     }
 
-    &.tag--informative {
+    &.care-tag--informative {
       @apply bg-informationBold text-textNeutralSubtle;
     }
   }
 
-  .tag--small {
+  .care-tag--small {
     @apply label font-medium;
   }
 }

@@ -24,26 +24,26 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={cn("btn", {
-        ["btn__default btn--primary"]:
+      className={cn("care-button", {
+        ["care-button__default care-button--primary"]:
           variant === "default" && type === "primary",
-        ["btn__default btn--secondary"]:
+        ["care-button__default care-button--secondary"]:
           variant === "default" && type === "secondary",
-        ["btn__default btn--tertiary"]:
+        ["care-button__default care-button--tertiary"]:
           variant === "default" && type === "tertiary",
-        ["btn__positive btn--primary"]:
+        ["care-button__positive care-button--primary"]:
           variant === "positive" && type === "primary",
-        ["btn__positive btn--secondary"]:
+        ["care-button__positive care-button--secondary"]:
           variant === "positive" && type === "secondary",
-        ["btn__positive btn--tertiary"]:
+        ["care-button__positive care-button--tertiary"]:
           variant === "positive" && type === "tertiary",
-        ["btn__negative btn--primary"]:
+        ["care-button__negative care-button--primary"]:
           variant === "negative" && type === "primary",
-        ["btn__negative btn--secondary"]:
+        ["care-button__negative care-button--secondary"]:
           variant === "negative" && type === "secondary",
-        ["btn__negative btn--tertiary"]:
+        ["care-button__negative care-button--tertiary"]:
           variant === "negative" && type === "tertiary",
-        ["btn--small"]: size === "small",
+        ["care-button--small"]: size === "small",
       })}
       disabled={disabled}
       type={htmlType}

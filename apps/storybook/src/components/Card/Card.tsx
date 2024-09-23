@@ -11,7 +11,7 @@ interface IProps {
 
 const Card = ({ lead, title, content, leading }: IProps) => {
   return (
-    <div>
+    <div className={styles.card}>
       <div className={styles.lead}>{lead}</div>
       <div className={styles.container}>
         {leading}

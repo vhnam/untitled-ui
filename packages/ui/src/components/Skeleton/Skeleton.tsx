@@ -14,19 +14,19 @@ const Skeleton = ({ size, variant }: SkeletonProps) => {
   const skeletonVariantClassName = useMemo(() => {
     switch (variant) {
       case "text":
-        return `skeleton__text skeleton__text--${size as SkeletonSizeForText}`;
+        return `care-skeleton__text care-skeleton__text--${size as SkeletonSizeForText}`;
       case "circle":
-        return `skeleton__circle skeleton__circle--${size as SkeletonSizeForAvatar}`;
+        return `care-skeleton__circle care-skeleton__circle--${size as SkeletonSizeForAvatar}`;
       case "square":
-        return `skeleton__square skeleton__square--${size as SkeletonSizeForAvatar}`;
+        return `care-skeleton__square care-skeleton__square--${size as SkeletonSizeForAvatar}`;
       case "rectangle":
-        return `skeleton__rectangle skeleton__rectangle--${size as SkeletonSizeForAvatar}`;
+        return `care-skeleton__rectangle care-skeleton__rectangle--${size as SkeletonSizeForAvatar}`;
       default:
         return "";
     }
   }, [size, variant]);
 
-  return <div className={cn("skeleton", skeletonVariantClassName)} />;
+  return <div className={cn("care-skeleton", skeletonVariantClassName)} />;
 };
 
 export default Skeleton;

@@ -28,10 +28,11 @@ export const All = () => (
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          gap: "0.5rem",
         }}
       >
         <Icon name={iconName} />
-        <div>{iconName}</div>
+        <div className="label">{iconName}</div>
       </div>
     ))}
   </div>

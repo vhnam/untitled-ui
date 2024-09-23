@@ -22,8 +22,9 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: [
+    "./assets/",
     {
-      from: "../node_modules/geist/dist/fonts/geist-sans",
+      from: "../../../node_modules/geist/dist/fonts/geist-sans",
       to: "/fonts/geist-sans",
     },
   ],

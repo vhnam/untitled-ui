@@ -19,27 +19,28 @@ const Tag = ({
 }: TagProps) => {
   return (
     <div
-      className={cn("tag", {
-        ["tag__low tag--neutral"]: contrast === "low" && variant === "neutral",
-        ["tag__low tag--negative"]:
+      className={cn("care-tag", {
+        ["care-tag__low care-tag--neutral"]:
+          contrast === "low" && variant === "neutral",
+        ["care-tag__low care-tag--negative"]:
           contrast === "low" && variant === "negative",
-        ["tag__low tag--attention"]:
+        ["care-tag__low care-tag--attention"]:
           contrast === "low" && variant === "attention",
-        ["tag__low tag--positive"]:
+        ["care-tag__low care-tag--positive"]:
           contrast === "low" && variant === "positive",
-        ["tag__low tag--informative"]:
+        ["care-tag__low care-tag--informative"]:
           contrast === "low" && variant === "informative",
-        ["tag__high tag--neutral"]:
+        ["care-tag__high care-tag--neutral"]:
           contrast === "high" && variant === "neutral",
-        ["tag__high tag--negative"]:
+        ["care-tag__high care-tag--negative"]:
           contrast === "high" && variant === "negative",
-        ["tag__high tag--attention"]:
+        ["care-tag__high care-tag--attention"]:
           contrast === "high" && variant === "attention",
-        ["tag__high tag--positive"]:
+        ["care-tag__high care-tag--positive"]:
           contrast === "high" && variant === "positive",
-        ["tag__high tag--informative"]:
+        ["care-tag__high care-tag--informative"]:
           contrast === "high" && variant === "informative",
-        ["tag--small"]: size === "small",
+        ["care-care-tag--small"]: size === "small",
       })}
     >
       {icon && (

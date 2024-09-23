@@ -7,8 +7,8 @@ export interface BadgeProps extends PropsWithChildren {
 
 const Badge = ({ badgeContent, children }: BadgeProps) => {
   return (
-    <div className={cn("badge")}>
-      <div className={cn("badge__content")}>{badgeContent}</div>
+    <div className={cn("care-badge")}>
+      <div className={cn("care-badge__content")}>{badgeContent}</div>
       <div>{children}</div>
     </div>
   );
