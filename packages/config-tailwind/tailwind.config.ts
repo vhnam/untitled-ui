@@ -12,7 +12,13 @@ type BorderWidthKey = keyof typeof tokens.borderWidth;
 // We want each package to be responsible for its own content.
 const config: Omit<Config, "content"> = {
   theme: {
-    colors: { ...tokens.color, ...tokens.color.semantic },
+    colors: {
+      ...tokens.color,
+      ...tokens.color.semantic,
+      ...{
+        transparent: "transparent",
+      },
+    },
     fontFamily: {
       sans: [tokens.fontFamily.text, "sans-serif"],
     },

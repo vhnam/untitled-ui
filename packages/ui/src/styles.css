@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --animation-duration: 200ms;
+  --animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
 @layer base {
   @font-face {
     font-family: "geist";
@@ -327,10 +332,6 @@
 
   /* TextInput */
 
-  .care-textInput {
-    /* @apply ; */
-  }
-
   .care-textInput__container {
     @apply relative flex gap-xxsmall pt-[28px] pb-[12px] px-small bg-neutralSubtle rounded-t-xsmall;
 
@@ -342,16 +343,16 @@
   .care-textInput__label {
     @apply absolute top-0 left-0 paragraph text-textNeutralBold translate-x-[16px] translate-y-[22px] z-10;
     transition:
-      font-size 200ms cubic-bezier(0, 0, 0.2, 1),
-      font-line-height 200ms cubic-bezier(0, 0, 0.2, 1),
-      color 200ms cubic-bezier(0, 0, 0.2, 1),
-      transform 200ms cubic-bezier(0, 0, 0.2, 1),
-      max-width 200ms cubic-bezier(0, 0, 0.2, 1);
+      font-size var(--animation-duration) var(--animation-timing-function),
+      font-line-height var(--animation-duration)
+        var(--animation-timing-function),
+      color var(--animation-duration) var(--animation-timing-function),
+      transform var(--animation-duration) var(--animation-timing-function),
+      max-width var(--animation-duration) var(--animation-timing-function);
   }
 
   .care-textInput__input {
-    background-color: transparent;
-    @apply w-full paragraph text-textNeutralBolder outline-none;
+    @apply w-full paragraph text-textNeutralBolder bg-transparent outline-none;
   }
 
   .care-textInput__trailingIcon {
@@ -363,7 +364,7 @@
   }
 
   .care-textInput__helperText {
-    @apply mt-xxsmall label font-medium;
+    @apply mt-xxsmall label font-medium text-textNeutralBold;
   }
 
   .care-textInput__errorMessage {
@@ -393,6 +394,79 @@
   }
 
   .care-textInput.care-textInput--disabled {
+    @apply opacity-[0.38] cursor-default;
+  }
+
+  /* Textarea */
+
+  .care-textarea__container {
+    @apply relative flex gap-xxsmall pt-[28px] pb-[12px] px-small bg-neutralSubtle rounded-t-xsmall;
+
+    &::before {
+      @apply content-empty absolute left-0 bottom-0 w-full border-b-small border-solid border-textNeutralBold;
+    }
+  }
+
+  .care-textarea__label {
+    @apply absolute top-0 left-0 paragraph text-textNeutralBold translate-x-[16px] translate-y-[22px] z-10;
+    transition:
+      font-size var(--animation-duration) var(--animation-timing-function),
+      font-line-height var(--animation-duration)
+        var(--animation-timing-function),
+      color var(--animation-duration) var(--animation-timing-function),
+      transform var(--animation-duration) var(--animation-timing-function),
+      max-width var(--animation-duration) var(--animation-timing-function);
+  }
+
+  .care-textarea__input {
+    @apply w-full paragraph text-textNeutralBolder bg-transparent resize-none outline-none;
+  }
+
+  .care-textarea__helper {
+    @apply flex justify-between gap-xxsmall;
+  }
+
+  .care-textarea__helperText,
+  .care-textarea__countNumber {
+    @apply mt-xxsmall label font-medium text-textNeutralBold;
+  }
+
+  .care-textarea__errorMessage {
+    @apply mt-xxsmall label font-medium text-textNegativeBold;
+  }
+
+  .care-textarea.care-textarea--focused {
+    .care-textInput__container::before {
+      @apply border-b-medium;
+    }
+
+    .care-textarea__label {
+      @apply label font-medium translate-y-[12px];
+    }
+  }
+
+  .care-textarea.care-textarea--focused {
+    .care-textInput__container::before {
+      @apply border-b-medium;
+    }
+
+    .care-textarea__label {
+      @apply label font-medium translate-y-[12px];
+    }
+  }
+
+  .care-textarea.care-textarea--error {
+    .care-textarea__label,
+    .care-textarea__errorMessage {
+      @apply text-textNegativeBold;
+    }
+
+    .care-textarea__container::before {
+      @apply border-b-negativeBold;
+    }
+  }
+
+  .care-textarea.care-textarea--disabled {
     @apply opacity-[0.38] cursor-default;
   }
 }
