@@ -163,6 +163,60 @@
     @apply p-xxsmall h3 gap-xxxsmall leading-20;
   }
 
+  /* Radio */
+
+  .care-radio__container {
+    @apply flex items-center;
+
+    &:hover {
+      @apply cursor-pointer;
+    }
+  }
+
+  .care-radio__input {
+    @apply hidden;
+  }
+
+  .care-radio__circleContainer {
+    @apply p-[8px] rounded-full;
+  }
+
+  .care-radio__circle {
+    @apply relative size-[20px] border-medium border-solid border-textNeutralBold rounded-full;
+
+    &::before {
+      @apply content-empty absolute top-[50%] left-[50%] size-[12px] translate-x-[-50%] translate-y-[-50%] bg-transparent rounded-full z-10;
+    }
+  }
+
+  .care-radio__label {
+    @apply paragraph text-textNeutralBold;
+  }
+
+  .care-radio:hover {
+    .care-radio__circleContainer {
+      @apply bg-neutralSubtle;
+    }
+  }
+
+  .care-radio__input[type="radio"]:checked
+    + .care-radio__circleContainer
+    .care-radio__circle::before {
+    @apply bg-neutralBold;
+  }
+
+  .care-radio--disabled {
+    @apply cursor-default pointer-events-none;
+
+    .care-radio__circleContainer {
+      @apply opacity-[0.4];
+    }
+
+    .care-radio__label {
+      @apply text-textNeutralDisabled;
+    }
+  }
+
   /* Skeleton */
 
   @keyframes gradient {
