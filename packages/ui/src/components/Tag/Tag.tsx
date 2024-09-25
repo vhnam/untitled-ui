@@ -40,7 +40,7 @@ const Tag = ({
           contrast === "high" && variant === "positive",
         ["care-tag__high care-tag--informative"]:
           contrast === "high" && variant === "informative",
-        ["care-care-tag--small"]: size === "small",
+        ["care-tag--small"]: size === "small",
       })}
     >
       {icon && (

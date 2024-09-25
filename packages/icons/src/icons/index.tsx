@@ -1,3 +1,4 @@
+export { default as ArrowDropDown } from "./ArrowDropDown";
 export { default as ArrowForward } from "./ArrowForward";
 export { default as Cancel } from "./Cancel";
 export { default as Checkbox } from "./Checkbox";
@@ -5,6 +6,7 @@ export { default as CheckboxIndeterminate } from "./CheckboxIndeterminate";
 export { default as CheckboxOutline } from "./CheckboxOutline";
 export { default as CheckCircle } from "./CheckCircle";
 export { default as Image } from "./Image";
+export { default as Location } from "./Location";
 export { default as Notifications } from "./Notifications";
 export { default as Radio } from "./Radio";
 export { default as RadioOutline } from "./RadioOutline";

@@ -208,6 +208,16 @@
     }
   }
 
+  /* Chips */
+
+  .care-chips {
+    @apply inline-flex gap-xxxsmall h2 px-xsmall py-xxsmall text-textNeutralBold font-semiBold bg-canvasSubtle border-small border-solid border-borderNeutralSubtle rounded-full;
+  }
+
+  .care-chips--active {
+    @apply text-textNeutralSubtle bg-canvasBolder;
+  }
+
   /* Radio */
 
   .care-radio__container {
