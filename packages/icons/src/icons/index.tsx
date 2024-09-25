@@ -6,3 +6,5 @@ export { default as CheckboxOutline } from "./CheckboxOutline";
 export { default as CheckCircle } from "./CheckCircle";
 export { default as Image } from "./Image";
 export { default as Notifications } from "./Notifications";
+export { default as Radio } from "./Radio";
+export { default as RadioOutline } from "./RadioOutline";

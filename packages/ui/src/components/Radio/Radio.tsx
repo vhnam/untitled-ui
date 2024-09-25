@@ -1,16 +1,46 @@
+import { Icon } from "@repo/icons";
 import { nanoid } from "nanoid";
-import { PropsWithChildren, useEffect, useState } from "react";
+import {
+  ChangeEvent,
+  PropsWithChildren,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 import { cn } from "../../utils/cn";
 
 export interface RadioProps extends PropsWithChildren {
+  checked?: boolean;
   disabled?: boolean;
   name: string;
   id?: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Radio = ({ children, disabled = false, id, ...props }: RadioProps) => {
+const Radio = ({
+  checked,
+  children,
+  disabled = false,
+  id,
+  onChange,
+  ...props
+}: RadioProps) => {
   const [radioId, setRadioId] = useState<string>();
+  const [isChecked, setIsChecked] = useState(checked);
+
+  const radioIcon = useMemo(() => {
+    if (isChecked) return "Radio";
+    return "RadioOutline";
+  }, [isChecked]);
+
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(e.currentTarget.checked);
+
+    if (onChange) {
+      onChange(e);
+    }
+  };
 
   useEffect(() => {
     setRadioId(id ?? nanoid(10));
@@ -31,10 +61,11 @@ const Radio = ({ children, disabled = false, id, ...props }: RadioProps) => {
           className={cn("care-radio__input")}
           id={radioId}
           type="radio"
+          onChange={handleOnChange}
           {...props}
         />
-        <div className={cn("care-radio__circleContainer")}>
-          <div className={cn("care-radio__circle")}></div>
+        <div className={cn("care-radio__icon")}>
+          <Icon name={radioIcon} />
         </div>
         <div className={cn("care-radio__label")}>{children}</div>
       </label>
