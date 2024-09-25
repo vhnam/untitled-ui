@@ -1,16 +1,16 @@
 import { type IconName } from "@repo/icons";
 
-export const IconNames: IconName[] = [
-  "ArrowDropDown",
-  "ArrowForward",
-  "Cancel",
+export const IconNames: Record<string, IconName[]> = {
+  Arrows: ["ArrowDropDown", "ArrowForward"],
+  Statuses: ["Cancel", "CheckCircle"],
+  Action: ["Notifications"],
+  Features: ["Image", "Location"],
+};
+
+export const ComponentNames: IconName[] = [
   "Checkbox",
   "CheckboxIndeterminate",
   "CheckboxOutline",
-  "CheckCircle",
-  "Image",
-  "Location",
-  "Notifications",
   "Radio",
   "RadioOutline",
   "SwitchOff",

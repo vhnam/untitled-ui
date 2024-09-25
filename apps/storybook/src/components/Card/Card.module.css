@@ -4,7 +4,7 @@
 
 .lead {
   padding-bottom: 0.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
   font-weight: 600;
   border-bottom: 1px solid #c3c3c3;
 }

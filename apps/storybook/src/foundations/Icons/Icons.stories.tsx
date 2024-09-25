@@ -14,25 +14,45 @@ const meta = {
 export default meta;
 
 export const All = () => (
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(5, 1fr)",
-      gap: "1rem",
-    }}
-  >
-    {IconNames.map((iconName) => (
+  <div>
+    {Object.keys(IconNames).map((iconCategory) => (
       <div
-        key={iconName}
+        key={iconCategory}
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "0.5rem",
+          marginBottom: "3rem",
         }}
       >
-        <Icon name={iconName} />
-        <div className="label">{iconName}</div>
+        <div
+          style={{
+            paddingBottom: "0.5rem",
+            marginBottom: "1rem",
+            borderBottom: "1px solid #c3c3c3",
+          }}
+        >
+          {iconCategory}
+        </div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(5, 1fr)",
+            gap: "1rem",
+          }}
+        >
+          {IconNames[iconCategory].map((iconName) => (
+            <div
+              key={iconName}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "0.5rem",
+              }}
+            >
+              <Icon name={iconName} />
+              <div className="label">{iconName}</div>
+            </div>
+          ))}
+        </div>
       </div>
     ))}
   </div>
