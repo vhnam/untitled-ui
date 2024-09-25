@@ -254,6 +254,20 @@
     }
   }
 
+  /* Divider */
+
+  .care-divider {
+    @apply w-full;
+
+    &.care-divider--inset {
+      @apply py-xsmall px-medium;
+    }
+  }
+
+  .care-divider__line {
+    @apply w-full h-[1px] bg-borderNeutralSubtle;
+  }
+
   /* Skeleton */
 
   @keyframes gradient {

@@ -1,7 +1,8 @@
 export { Badge, type BadgeProps } from "./components/Badge";
 export { Button, type ButtonProps } from "./components/Button";
-export { Chips, type ChipsProps } from "./components/Chips";
 export { Checkbox, type CheckboxProps } from "./components/Checkbox";
+export { Chips, type ChipsProps } from "./components/Chips";
+export { Divider, type DividerProps } from "./components/Divider";
 export { IconButton, type IconButtonProps } from "./components/IconButton";
 export { Radio, type RadioProps } from "./components/Radio";
 export {
