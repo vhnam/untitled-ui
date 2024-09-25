@@ -4,21 +4,23 @@ export type IconName = keyof typeof Icons;
 
 export interface IconProps {
   className?: string;
-  name: IconName;
-  width?: number;
   height?: number;
+  name: IconName;
+  viewBox?: string;
+  width?: number;
 }
 
-const Icon = ({ name, width = 20, height = 20, ...props }: IconProps) => {
+const Icon = ({
+  height = 20,
+  name,
+  viewBox = "0 0 20 20",
+  width = 20,
+  ...props
+}: IconProps) => {
   const IconComponent = Icons[name];
 
   return (
-    <IconComponent
-      width={width}
-      height={height}
-      viewBox="0 0 20 20"
-      {...props}
-    />
+    <IconComponent width={width} height={height} viewBox={viewBox} {...props} />
   );
 };
 

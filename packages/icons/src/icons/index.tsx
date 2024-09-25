@@ -8,3 +8,5 @@ export { default as Image } from "./Image";
 export { default as Notifications } from "./Notifications";
 export { default as Radio } from "./Radio";
 export { default as RadioOutline } from "./RadioOutline";
+export { default as SwitchOff } from "./SwitchOff";
+export { default as SwitchOn } from "./SwitchOn";

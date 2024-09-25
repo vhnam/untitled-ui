@@ -9,6 +9,7 @@ export {
   type SkeletonSizeForText,
   type SkeletonProps,
 } from "./components/Skeleton";
+export { Switch, type SwitchProps } from "./components/Switch";
 export { Tag, type TagProps } from "./components/Tag";
 export { Textarea, type TextareaProps } from "./components/Textarea";
 export { TextInput, type TextInputProps } from "./components/TextInput";
