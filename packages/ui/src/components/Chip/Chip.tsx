@@ -3,23 +3,23 @@ import { PropsWithChildren } from "react";
 
 import { cn } from "../../utils/cn";
 
-export interface ChipsProps extends PropsWithChildren {
+export interface ChipProps extends PropsWithChildren {
   contrast?: "low" | "high";
   leadingIcon?: IconName;
   state?: "active" | "inactive";
   trailingIcon?: IconName;
 }
 
-const Chips = ({
+const Chip = ({
   children,
   leadingIcon,
   trailingIcon,
   state = "inactive",
-}: ChipsProps) => {
+}: ChipProps) => {
   return (
     <div
-      className={cn("care-chips", {
-        ["care-chips--active"]: state === "active",
+      className={cn("care-chip", {
+        ["care-chip--active"]: state === "active",
       })}
     >
       {leadingIcon && <Icon name={leadingIcon} />}
@@ -29,4 +29,4 @@ const Chips = ({
   );
 };
 
-export default Chips;
+export default Chip;

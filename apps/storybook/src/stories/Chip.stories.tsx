@@ -1,37 +1,37 @@
-import { Chips, type ChipsProps } from "@repo/ui";
+import { Chip, type ChipProps } from "@repo/ui";
 import type { Meta, StoryObj } from "@storybook/react";
 import outdent from "outdent";
 
 const meta = {
-  title: "Components/Chips",
-  component: Chips,
+  title: "Components/Chip",
+  component: Chip,
   parameters: {
     chromatic: { disableSnapshot: false },
     docs: {
       source: {
         code: outdent`
-          <Chips>Chips</Chips>
+          <Chip>Chip</Chip>
         `,
       },
     },
   },
-} satisfies Meta<ChipsProps>;
+} satisfies Meta<ChipProps>;
 
 export default meta;
 
-type Story = StoryObj<ChipsProps>;
+type Story = StoryObj<ChipProps>;
 
 export const Default = {
   name: "Default",
   args: {
-    children: "Chips",
+    children: "Chip",
   },
 } satisfies Story;
 
 export const WithIcon = {
   name: "With Icon",
   args: {
-    children: "Chips",
+    children: "Chip",
     leadingIcon: "Location",
     trailingIcon: "ArrowDropDown",
   },
@@ -40,7 +40,7 @@ export const WithIcon = {
 export const Active = {
   name: "Active",
   args: {
-    children: "Chips",
+    children: "Chip",
     leadingIcon: "Location",
     trailingIcon: "ArrowDropDown",
     state: "active",
