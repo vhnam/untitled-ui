@@ -1,0 +1,7 @@
+.care-badge {
+  @apply relative inline-flex;
+}
+
+.care-badge__content {
+  @apply absolute top-0 right-0 px-xxxsmall py-[0.125rem] min-w-xxsmall min-h-xxsmall label font-medium text-textNeutralSubtle bg-negativeBold rounded-full translate-x-2/4 translate-y-[-50%] origin-top-right scale-100 z-10;
+}

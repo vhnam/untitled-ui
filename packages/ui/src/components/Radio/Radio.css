@@ -1,0 +1,33 @@
+.care-radio__container {
+  @apply flex items-center;
+
+  &:hover {
+    @apply cursor-pointer;
+  }
+}
+
+.care-radio__input {
+  @apply hidden;
+}
+
+.care-radio__icon {
+  @apply p-[8px] rounded-full;
+}
+
+.care-radio__label {
+  @apply paragraph text-textNeutralBold;
+}
+
+.care-radio:hover {
+  .care-radio__icon {
+    @apply bg-neutralSubtle;
+  }
+}
+
+.care-radio--disabled {
+  @apply cursor-default pointer-events-none;
+
+  .care-radio__icon {
+    @apply opacity-[0.4];
+  }
+}

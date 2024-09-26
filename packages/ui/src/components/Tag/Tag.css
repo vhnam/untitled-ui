@@ -1,0 +1,51 @@
+.care-tag {
+  @apply relative inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall;
+}
+
+.care-tag__low {
+  &.care-tag--neutral {
+    @apply bg-neutralSubtle text-textNeutralBolder;
+  }
+
+  &.care-tag--negative {
+    @apply bg-negativeSubtle text-textNegativeBolder;
+  }
+
+  &.care-tag--attention {
+    @apply bg-attentionSubtle text-textAttentionBolder;
+  }
+
+  &.care-tag--positive {
+    @apply bg-positiveSubtle text-textPositiveBolder;
+  }
+
+  &.care-tag--informative {
+    @apply bg-informationSubtle text-textInformationBolder;
+  }
+}
+
+.care-tag__high {
+  &.care-tag--neutral {
+    @apply bg-neutralBold text-textNeutralSubtle;
+  }
+
+  &.care-tag--negative {
+    @apply bg-negativeBold text-textNeutralSubtle;
+  }
+
+  &.care-tag--attention {
+    @apply bg-attentionBold text-textNeutralSubtle;
+  }
+
+  &.care-tag--positive {
+    @apply bg-positiveBold text-textNeutralSubtle;
+  }
+
+  &.care-tag--informative {
+    @apply bg-informationBold text-textNeutralSubtle;
+  }
+}
+
+.care-tag--small {
+  @apply label font-medium;
+}

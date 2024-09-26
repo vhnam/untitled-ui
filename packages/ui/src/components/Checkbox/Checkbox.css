@@ -1,0 +1,42 @@
+.care-checkbox__container {
+  @apply flex items-center;
+
+  &:hover {
+    @apply cursor-pointer;
+  }
+}
+
+.care-checkbox__input {
+  @apply hidden;
+}
+
+.care-checkbox__label {
+  @apply paragraph text-textNeutralBold;
+}
+
+.care-checkbox__icon {
+  @apply relative p-[8px] text-textNeutralBold rounded-full;
+}
+
+.care-checkbox:hover {
+  .care-checkbox__icon {
+    @apply bg-neutralSubtle;
+  }
+}
+
+.care-checkbox--error {
+  .care-checkbox__icon {
+    @apply text-negativeBoldPressed;
+  }
+  &:hover .care-checkbox__icon {
+    @apply bg-negativeSubtle;
+  }
+}
+
+.care-checkbox--disabled {
+  @apply cursor-default pointer-events-none;
+
+  .care-checkbox__icon {
+    @apply opacity-[0.4];
+  }
+}

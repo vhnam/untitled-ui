@@ -1,0 +1,105 @@
+.care-button {
+  @apply relative inline-flex h2 p-small font-semiBold gap-xxsmall rounded-full;
+
+  &:focus::after {
+    @apply content-empty absolute top-[-0.25rem] bottom-[-0.25rem] left-[-0.25rem] right-[-0.25rem] rounded-full border-medium border-solid border-canvasBolder;
+  }
+}
+
+.care-button__default {
+  &.care-button--primary {
+    @apply bg-canvasBolder text-neutralSubtle;
+  }
+
+  &.care-button--primary:not(:disabled):active {
+    @apply bg-neutralBoldPressed;
+  }
+
+  &.care-button--primary:focus::after {
+    @apply border-canvasBolder;
+  }
+
+  &.care-button--secondary {
+    @apply bg-neutralSubtle text-textNeutralBolder;
+  }
+
+  &.care-button--secondary:active {
+    @apply bg-neutralSubtle text-textNeutralBold;
+  }
+
+  &.care-button--tertiary {
+    @apply text-textNeutralBolder;
+  }
+
+  &.care-button--tertiary:active {
+    @apply text-textNeutralBold;
+  }
+
+  &:disabled {
+    @apply bg-neutralSubtle text-textNeutralDisabled;
+  }
+}
+
+.care-button__positive {
+  &.care-button--primary {
+    @apply bg-positiveBold text-neutralSubtle;
+  }
+
+  &.care-button--primary:not(:disabled):active {
+    @apply bg-positiveBoldPressed;
+  }
+
+  &.care-button--secondary {
+    @apply bg-neutralSubtle text-textPositiveBold;
+  }
+
+  &.care-button--secondary:active {
+    @apply bg-neutralSubtle text-textPositiveBolder;
+  }
+
+  &.care-button--tertiary {
+    @apply text-textPositiveBold;
+  }
+
+  &.care-button--tertiary:active {
+    @apply text-textPositiveBolder;
+  }
+
+  &:disabled {
+    @apply bg-positiveSubtle text-textPositiveDisabled;
+  }
+}
+
+.care-button__negative {
+  &.care-button--primary {
+    @apply bg-negativeBold text-neutralSubtle;
+  }
+
+  &.care-button--primary:not(:disabled):active {
+    @apply bg-negativeBoldPressed;
+  }
+
+  &.care-button--secondary {
+    @apply bg-neutralSubtle text-textNegativeBold;
+  }
+
+  &.care-button--secondary:active {
+    @apply bg-neutralSubtle text-textNegativeBolder;
+  }
+
+  &.care-button--tertiary {
+    @apply text-textNegativeBold;
+  }
+
+  &.care-button--tertiary:active {
+    @apply text-textNegativeBolder;
+  }
+
+  &:disabled {
+    @apply bg-negativeSubtle text-textNegativeDisabled;
+  }
+}
+
+.care-button--small {
+  @apply p-xxsmall h3 gap-xxxsmall leading-20;
+}
