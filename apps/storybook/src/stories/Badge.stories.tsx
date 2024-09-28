@@ -1,9 +1,9 @@
-import { Badge, IconButton, type BadgeProps } from "@repo/ui";
-import type { Meta, StoryObj } from "@storybook/react";
-import outdent from "outdent";
+import { Badge, IconButton, type BadgeProps } from '@repo/ui';
+import type { Meta, StoryObj } from '@storybook/react';
+import outdent from 'outdent';
 
 const meta = {
-  title: "Components/Badge",
+  title: 'Components/Badge',
   component: Badge,
   parameters: {
     chromatic: { disableSnapshot: false },
@@ -22,15 +22,15 @@ export default meta;
 type Story = StoryObj<BadgeProps>;
 
 export const Notification = {
-  name: "Notification Badge",
+  name: 'Notification Badge',
   args: {
     children: <IconButton iconName="Notifications" />,
-    badgeContent: "99+",
+    badgeContent: '99+',
   },
 } satisfies Story;
 
 export const Dot = {
-  name: "Dot Badge",
+  name: 'Dot Badge',
   args: {
     children: <IconButton iconName="Notifications" />,
   },

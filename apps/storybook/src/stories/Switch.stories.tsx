@@ -1,9 +1,9 @@
-import { Switch, type SwitchProps } from "@repo/ui";
-import type { Meta, StoryObj } from "@storybook/react";
-import outdent from "outdent";
+import { Switch, type SwitchProps } from '@repo/ui';
+import type { Meta, StoryObj } from '@storybook/react';
+import outdent from 'outdent';
 
 const meta = {
-  title: "Components/Switch",
+  title: 'Components/Switch',
   component: Switch,
   parameters: {
     chromatic: { disableSnapshot: false },
@@ -22,16 +22,16 @@ export default meta;
 type Story = StoryObj<SwitchProps>;
 
 export const Default = {
-  name: "Default",
+  name: 'Default',
   args: {
-    name: "isAgree",
+    name: 'isAgree',
   },
 } satisfies Story;
 
 export const Disabled = {
-  name: "Disabled",
+  name: 'Disabled',
   args: {
-    name: "isAgree",
+    name: 'isAgree',
     disabled: true,
     defaultChecked: true,
   },

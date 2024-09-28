@@ -1,8 +1,8 @@
-import { forwardRef, Ref, SVGProps } from "react";
+import { forwardRef, Ref, SVGProps } from 'react';
 
 const RadioOutline = (
   props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ const RadioOutline = (
       y={0}
       maskUnits="userSpaceOnUse"
       style={{
-        maskType: "alpha",
+        maskType: 'alpha',
       }}
     >
       <path fill="currentColor" d="M0 0h20v20H0z" />

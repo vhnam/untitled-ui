@@ -3,7 +3,7 @@
 }
 
 .care-switch__container {
-  @apply pr-[16px] text-textNeutralBold bg-canvasSubtle border-medium border-solid border-neutralBold rounded-full cursor-pointer;
+  @apply cursor-pointer rounded-full border-medium border-solid border-neutralBold bg-canvasSubtle pr-[16px] text-textNeutralBold;
 }
 
 .care-switch__input {
@@ -12,7 +12,7 @@
 
 .care-switch--checked {
   .care-switch__container {
-    @apply pr-0 pl-[16px] text-textPositiveBold bg-positiveBold border-positiveBold;
+    @apply border-positiveBold bg-positiveBold pl-[16px] pr-0 text-textPositiveBold;
   }
 }
 
@@ -23,18 +23,18 @@
     }
   }
   .care-switch__container::before {
-    @apply content-empty absolute top-[-6px] left-[-2px] right-[-2px] bottom-[-6px] bg-neutralSubtle rounded-full z-[-1];
+    @apply absolute bottom-[-6px] left-[-2px] right-[-2px] top-[-6px] z-[-1] rounded-full bg-neutralSubtle content-empty;
   }
 }
 
 .care-switch--disabled {
-  @apply cursor-default pointer-events-none;
+  @apply pointer-events-none cursor-default;
 
   &.care-switch--checked .care-switch__container {
     @apply bg-textNeutralDisabled;
   }
 
   .care-switch__container {
-    @apply text-textNeutralDisabled border-textNeutralDisabled;
+    @apply border-textNeutralDisabled text-textNeutralDisabled;
   }
 }

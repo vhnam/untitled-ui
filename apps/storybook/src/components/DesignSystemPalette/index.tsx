@@ -1,1 +1,1 @@
-export { default } from "./DesignSystemPalette";
+export { default } from './DesignSystemPalette';

@@ -1,9 +1,9 @@
-import { Radio, type RadioProps } from "@repo/ui";
-import type { Meta, StoryObj } from "@storybook/react";
-import outdent from "outdent";
+import { Radio, type RadioProps } from '@repo/ui';
+import type { Meta, StoryObj } from '@storybook/react';
+import outdent from 'outdent';
 
 const meta = {
-  title: "Components/Radio",
+  title: 'Components/Radio',
   component: Radio,
   parameters: {
     chromatic: { disableSnapshot: false },
@@ -22,18 +22,18 @@ export default meta;
 type Story = StoryObj<RadioProps>;
 
 export const Default = {
-  name: "Default",
+  name: 'Default',
   args: {
-    children: "Trumpet",
-    name: "instrument",
+    children: 'Trumpet',
+    name: 'instrument',
   },
 } satisfies Story;
 
 export const Disabled = {
-  name: "Disabled",
+  name: 'Disabled',
   args: {
-    children: "Trumpet",
-    name: "instrument",
+    children: 'Trumpet',
+    name: 'instrument',
     disabled: true,
   },
 } satisfies Story;

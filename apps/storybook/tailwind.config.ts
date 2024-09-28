@@ -1,8 +1,8 @@
-import type { Config } from "tailwindcss";
-import sharedConfig from "@repo/tailwind-config";
+import type { Config } from 'tailwindcss';
+import sharedConfig from '@repo/tailwind-config';
 
 const config: Config = {
-  content: ["./src/stories/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ['./src/stories/**/*.{js,ts,jsx,tsx,mdx}'],
   plugins: [],
   presets: [sharedConfig],
 };

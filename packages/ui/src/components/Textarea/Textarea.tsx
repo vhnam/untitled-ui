@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import useInputValue from "../../hooks/useInputValue";
-import { cn } from "../../utils/cn";
+import useInputValue from '../../hooks/useInputValue';
+import { cn } from '../../utils/cn';
 
 export interface TextareaProps {
   disabled?: boolean;
@@ -41,16 +41,16 @@ const Textarea = ({
 
   return (
     <div
-      className={cn("care-textarea", {
-        ["care-textarea--disabled"]: disabled,
-        ["care-textarea--error"]: error,
-        ["care-textarea--focused"]: isFocused || hasValue,
+      className={cn('care-textarea', {
+        ['care-textarea--disabled']: disabled,
+        ['care-textarea--error']: error,
+        ['care-textarea--focused']: isFocused || hasValue,
       })}
     >
       <div className="care-textarea__container">
         <label className="care-textarea__label">{label}</label>
         <textarea
-          className={cn("care-textarea__input")}
+          className={cn('care-textarea__input')}
           disabled={disabled}
           maxLength={maxLength}
           onChange={onValueChange}
@@ -64,10 +64,10 @@ const Textarea = ({
       <div className="care-textarea__helper">
         <div>
           {helperText && (
-            <div className={cn("care-textarea__helperText")}>{helperText}</div>
+            <div className={cn('care-textarea__helperText')}>{helperText}</div>
           )}
           {errorMessage && (
-            <div className={cn("care-textarea__errorMessage")}>
+            <div className={cn('care-textarea__errorMessage')}>
               {errorMessage}
             </div>
           )}

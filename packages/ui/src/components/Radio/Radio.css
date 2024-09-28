@@ -11,7 +11,7 @@
 }
 
 .care-radio__icon {
-  @apply p-[8px] rounded-full;
+  @apply rounded-full p-[8px];
 }
 
 .care-radio__label {
@@ -25,7 +25,7 @@
 }
 
 .care-radio--disabled {
-  @apply cursor-default pointer-events-none;
+  @apply pointer-events-none cursor-default;
 
   .care-radio__icon {
     @apply opacity-[0.4];

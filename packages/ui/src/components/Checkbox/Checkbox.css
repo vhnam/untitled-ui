@@ -15,7 +15,7 @@
 }
 
 .care-checkbox__icon {
-  @apply relative p-[8px] text-textNeutralBold rounded-full;
+  @apply relative rounded-full p-[8px] text-textNeutralBold;
 }
 
 .care-checkbox:hover {
@@ -34,7 +34,7 @@
 }
 
 .care-checkbox--disabled {
-  @apply cursor-default pointer-events-none;
+  @apply pointer-events-none cursor-default;
 
   .care-checkbox__icon {
     @apply opacity-[0.4];

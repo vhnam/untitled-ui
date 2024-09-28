@@ -1,1 +1,1 @@
-export { default } from "./GradientColor";
+export { default } from './GradientColor';

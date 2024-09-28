@@ -1,8 +1,8 @@
-import type { Preview } from "@storybook/react";
-import React from "react";
-import { DocsContainer } from "@storybook/blocks";
+import type { Preview } from '@storybook/react';
+import React from 'react';
+import { DocsContainer } from '@storybook/blocks';
 
-import "@repo/ui/styles.css";
+import '@repo/ui/styles.css';
 
 const preview: Preview = {
   // decorators: [
@@ -24,19 +24,19 @@ const preview: Preview = {
     // },
     options: {
       storySort: {
-        method: "alphabetical",
+        method: 'alphabetical',
         order: [
-          "Foundations",
+          'Foundations',
           [
-            "Border Width",
-            "Colors",
-            "Elevation",
-            "Icons",
-            ["Overview", "Icons", "*"],
-            "*",
+            'Border Width',
+            'Colors',
+            'Elevation',
+            'Icons',
+            ['Overview', 'Icons', '*'],
+            '*',
           ],
-          "Semantics",
-          "Components",
+          'Semantics',
+          'Components',
         ],
       },
     },

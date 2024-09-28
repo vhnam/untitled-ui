@@ -1,7 +1,7 @@
-import { Icon } from "@repo/icons";
-import { ChangeEvent, useEffect, useMemo, useState } from "react";
+import { Icon } from '@repo/icons';
+import { ChangeEvent, useEffect, useMemo, useState } from 'react';
 
-import { cn } from "../../utils/cn";
+import { cn } from '../../utils/cn';
 
 export interface SwitchProps {
   checked?: boolean;
@@ -21,8 +21,8 @@ const Switch = ({
   const [isChecked, setIsChecked] = useState(defaultChecked ?? checked);
 
   const switchIcon = useMemo(() => {
-    if (isChecked) return "SwitchOn";
-    return "SwitchOff";
+    if (isChecked) return 'SwitchOn';
+    return 'SwitchOff';
   }, [isChecked]);
 
   const handleClickSwitch = () => {
@@ -35,13 +35,13 @@ const Switch = ({
 
   return (
     <div
-      className={cn("care-switch", {
-        ["care-switch--disabled"]: disabled,
-        ["care-switch--checked"]: isChecked,
+      className={cn('care-switch', {
+        ['care-switch--disabled']: disabled,
+        ['care-switch--checked']: isChecked,
       })}
       onClick={handleClickSwitch}
     >
-      <input className={cn("care-switch__input")} type="checkbox" {...props} />
+      <input className={cn('care-switch__input')} type="checkbox" {...props} />
       <div className="care-switch__container">
         <Icon name={switchIcon} viewBox="0 0 24 24" />
       </div>

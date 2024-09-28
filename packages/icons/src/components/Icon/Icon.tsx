@@ -1,4 +1,4 @@
-import * as Icons from "../../icons";
+import * as Icons from '../../icons';
 
 export type IconName = keyof typeof Icons;
 
@@ -13,7 +13,7 @@ export interface IconProps {
 const Icon = ({
   height = 20,
   name,
-  viewBox = "0 0 20 20",
+  viewBox = '0 0 20 20',
   width = 20,
   ...props
 }: IconProps) => {

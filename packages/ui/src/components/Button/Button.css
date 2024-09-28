@@ -1,8 +1,8 @@
 .care-button {
-  @apply relative inline-flex h2 p-small font-semiBold gap-xxsmall rounded-full;
+  @apply h2 relative inline-flex gap-xxsmall rounded-full p-small font-semiBold;
 
   &:focus::after {
-    @apply content-empty absolute top-[-0.25rem] bottom-[-0.25rem] left-[-0.25rem] right-[-0.25rem] rounded-full border-medium border-solid border-canvasBolder;
+    @apply absolute bottom-[-0.25rem] left-[-0.25rem] right-[-0.25rem] top-[-0.25rem] rounded-full border-medium border-solid border-canvasBolder content-empty;
   }
 }
 
@@ -101,5 +101,5 @@
 }
 
 .care-button--small {
-  @apply p-xxsmall h3 gap-xxxsmall leading-20;
+  @apply h3 gap-xxxsmall p-xxsmall leading-20;
 }

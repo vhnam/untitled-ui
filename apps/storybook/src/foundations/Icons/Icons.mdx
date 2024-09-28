@@ -1,9 +1,9 @@
-import { Canvas, Meta, Source } from "@storybook/blocks";
-import tokens from "@repo/design-tokens";
+import { Canvas, Meta, Source } from '@storybook/blocks';
+import tokens from '@repo/design-tokens';
 
-import Card from "../../components/Card";
+import Card from '../../components/Card';
 
-import * as IconsStories from "./Icons.stories";
+import * as IconsStories from './Icons.stories';
 
 <Meta title="Foundations/Icons/Icons" />
 
@@ -16,7 +16,7 @@ inherit the `color` of the parent container. It's not advised to overwrite the `
 ## Usage
 
 ```tsx
-import { Icon } from "@repo/ui";
+import { Icon } from '@repo/ui';
 
 const MyComponent = () => {
   return <Icon name="ArrowForwared" className="text-red-700" />;

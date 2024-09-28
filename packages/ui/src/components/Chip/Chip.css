@@ -1,7 +1,7 @@
 .care-chip {
-  @apply inline-flex gap-xxxsmall h2 px-xsmall py-xxsmall text-textNeutralBold font-semiBold bg-canvasSubtle border-small border-solid border-borderNeutralSubtle rounded-full;
+  @apply h2 inline-flex gap-xxxsmall rounded-full border-small border-solid border-borderNeutralSubtle bg-canvasSubtle px-xsmall py-xxsmall font-semiBold text-textNeutralBold;
 }
 
 .care-chip--active {
-  @apply text-textNeutralSubtle bg-canvasBolder;
+  @apply bg-canvasBolder text-textNeutralSubtle;
 }

@@ -1,5 +1,5 @@
-@import "primitives//Typography/Typography.css";
-@import "components/component.css";
+@import 'primitives//Typography/Typography.css';
+@import 'components/component.css';
 
 :root {
   --animation-duration: 200ms;
@@ -8,10 +8,10 @@
 
 @layer base {
   @font-face {
-    font-family: "geist";
+    font-family: 'geist';
     src:
-      url("/fonts/geist-sans/Geist-Variable.woff2") format("woff2"),
-      url("/fonts/geist-sans/Geist-Variable.woff") format("woff");
+      url('/fonts/geist-sans/Geist-Variable.woff2') format('woff2'),
+      url('/fonts/geist-sans/Geist-Variable.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }

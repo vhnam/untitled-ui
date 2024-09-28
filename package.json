@@ -6,7 +6,7 @@
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "clean": "turbo clean",
-    "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md,mdx,css}\"",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -26,6 +26,6 @@
     "packages/*"
   ],
   "lint-staged": {
-    "*.{ts,tsx,md,mdx}": "prettier --write"
+    "*.{ts,tsx,md,mdx,css}": "prettier --write"
   }
 }

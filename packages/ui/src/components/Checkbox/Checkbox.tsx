@@ -1,5 +1,5 @@
-import { Icon } from "@repo/icons";
-import { nanoid } from "nanoid";
+import { Icon } from '@repo/icons';
+import { nanoid } from 'nanoid';
 import {
   ChangeEvent,
   PropsWithChildren,
@@ -7,9 +7,9 @@ import {
   useEffect,
   useMemo,
   useState,
-} from "react";
+} from 'react';
 
-import { cn } from "../../utils/cn";
+import { cn } from '../../utils/cn';
 
 export interface CheckboxProps extends PropsWithChildren {
   checked?: boolean;
@@ -37,9 +37,9 @@ const Checkbox = ({
   const [isChecked, setIsChecked] = useState(defaultChecked ?? checked);
 
   const checkboxIcon = useMemo(() => {
-    if (indeterminate) return "CheckboxIndeterminate";
-    if (isChecked) return "Checkbox";
-    return "CheckboxOutline";
+    if (indeterminate) return 'CheckboxIndeterminate';
+    if (isChecked) return 'Checkbox';
+    return 'CheckboxOutline';
   }, [isChecked, indeterminate]);
 
   const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -64,24 +64,24 @@ const Checkbox = ({
 
   return (
     <div
-      className={cn("care-checkbox", {
-        ["care-checkbox--disabled"]: disabled,
-        ["care-checkbox--error"]: error,
+      className={cn('care-checkbox', {
+        ['care-checkbox--disabled']: disabled,
+        ['care-checkbox--error']: error,
       })}
     >
-      <label htmlFor={checkboxId} className={cn("care-checkbox__container")}>
+      <label htmlFor={checkboxId} className={cn('care-checkbox__container')}>
         <input
-          className={cn("care-checkbox__input")}
+          className={cn('care-checkbox__input')}
           id={checkboxId}
           type="checkbox"
           checked={isChecked}
           onChange={handleOnChange}
           {...props}
         />
-        <div className={cn("care-checkbox__icon")}>
+        <div className={cn('care-checkbox__icon')}>
           <Icon name={checkboxIcon} />
         </div>
-        <div className={cn("care-checkbox__label")}>{children}</div>
+        <div className={cn('care-checkbox__label')}>{children}</div>
       </label>
     </div>
   );

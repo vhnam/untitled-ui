@@ -1,4 +1,4 @@
-import { forwardRef, Ref, SVGProps } from "react";
+import { forwardRef, Ref, SVGProps } from 'react';
 
 const Cancel = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
   <svg

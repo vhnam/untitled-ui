@@ -1,4 +1,4 @@
-import { forwardRef, Ref, SVGProps } from "react";
+import { forwardRef, Ref, SVGProps } from 'react';
 
 const Radio = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
   <svg
@@ -16,7 +16,7 @@ const Radio = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
       y={0}
       maskUnits="userSpaceOnUse"
       style={{
-        maskType: "alpha",
+        maskType: 'alpha',
       }}
     >
       <path fill="currentColor" d="M0 0h20v20H0z" />

@@ -1,10 +1,10 @@
-import { create } from "@storybook/theming";
+import { create } from '@storybook/theming';
 
 export default create({
-  base: "dark",
+  base: 'dark',
 
-  brandTitle: "Care Health",
-  brandImage: "../img/logo.png",
+  brandTitle: 'Care Health',
+  brandImage: '../img/logo.png',
 
-  fontBase: "geist, sans-serif",
+  fontBase: 'geist, sans-serif',
 });

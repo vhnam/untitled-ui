@@ -1,10 +1,10 @@
-import { Icon } from "@repo/icons";
-import { Button, type ButtonProps } from "@repo/ui";
-import type { Meta, StoryObj } from "@storybook/react";
-import outdent from "outdent";
+import { Icon } from '@repo/icons';
+import { Button, type ButtonProps } from '@repo/ui';
+import type { Meta, StoryObj } from '@storybook/react';
+import outdent from 'outdent';
 
 const meta = {
-  title: "Components/Button",
+  title: 'Components/Button',
   component: Button,
   parameters: {
     chromatic: { disableSnapshot: false },
@@ -23,41 +23,41 @@ export default meta;
 type Story = StoryObj<ButtonProps>;
 
 export const Default = {
-  name: "Default",
+  name: 'Default',
   args: {
-    children: "Button",
-    variant: "default",
+    children: 'Button',
+    variant: 'default',
   },
 } satisfies Story;
 
 export const Positive = {
-  name: "Positive",
+  name: 'Positive',
   args: {
-    children: "Button",
-    variant: "positive",
+    children: 'Button',
+    variant: 'positive',
   },
 } satisfies Story;
 
 export const Negative = {
-  name: "Negative",
+  name: 'Negative',
   args: {
-    children: "Button",
-    variant: "negative",
+    children: 'Button',
+    variant: 'negative',
   },
 } satisfies Story;
 
 export const LeadingIcon = {
-  name: "With Leading Icon",
+  name: 'With Leading Icon',
   args: {
-    children: "Button",
+    children: 'Button',
     leadingIcon: <Icon name="Image" />,
   },
 };
 
 export const TrailingIcon = {
-  name: "With Trailing Icon",
+  name: 'With Trailing Icon',
   args: {
-    children: "Button",
+    children: 'Button',
     trailingIcon: <Icon name="ArrowForward" />,
   },
 };

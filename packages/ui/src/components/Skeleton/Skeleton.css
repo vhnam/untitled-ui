@@ -11,14 +11,14 @@
 }
 
 .care-skeleton {
-  @apply relative block py-0 bg-neutral-100 rounded-xsmall origin-left overflow-hidden;
+  @apply relative block origin-left overflow-hidden rounded-xsmall bg-neutral-100 py-0;
 
   &::before {
     @apply content-empty;
   }
 
   &::after {
-    @apply content-empty absolute top-0 bottom-0 inset-0 translate-x-[-100%];
+    @apply absolute inset-0 bottom-0 top-0 translate-x-[-100%] content-empty;
     background-image: linear-gradient(
       89.76deg,
       #f5f5f4 0%,
@@ -93,18 +93,18 @@
   @apply rounded-xsmall;
 
   &.care-skeleton__rectangle--xlarge {
-    @apply w-[128px] h-[calc(128px/1.5)];
+    @apply h-[calc(128px/1.5)] w-[128px];
   }
 
   &.care-skeleton__rectangle--large {
-    @apply w-[72px] h-[48px];
+    @apply h-[48px] w-[72px];
   }
 
   &.care-skeleton__rectangle--medium {
-    @apply w-[48px] h-[32px];
+    @apply h-[32px] w-[48px];
   }
 
   &.care-skeleton__rectangle--small {
-    @apply w-[32px] h-[calc(32px/1.5)];
+    @apply h-[calc(32px/1.5)] w-[32px];
   }
 }

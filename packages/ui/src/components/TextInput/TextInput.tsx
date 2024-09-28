@@ -1,7 +1,7 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useState } from 'react';
 
-import useInputValue from "../../hooks/useInputValue";
-import { cn } from "../../utils/cn";
+import useInputValue from '../../hooks/useInputValue';
+import { cn } from '../../utils/cn';
 
 export interface TextInputProps {
   disabled?: boolean;
@@ -39,16 +39,16 @@ const TextInput = ({
 
   return (
     <div
-      className={cn("care-textInput", {
-        ["care-textInput--disabled"]: disabled,
-        ["care-textInput--error"]: error,
-        ["care-textInput--focused"]: isFocused || hasValue,
+      className={cn('care-textInput', {
+        ['care-textInput--disabled']: disabled,
+        ['care-textInput--error']: error,
+        ['care-textInput--focused']: isFocused || hasValue,
       })}
     >
       <div className="care-textInput__container">
         <label className="care-textInput__label">{label}</label>
         <input
-          className={cn("care-textInput__input")}
+          className={cn('care-textInput__input')}
           disabled={disabled}
           onChange={onValueChange}
           onFocus={handleInputFocus}
@@ -57,17 +57,17 @@ const TextInput = ({
           {...props}
         />
         {trailingIcon && (
-          <div className={cn("care-textInput__trailingIcon")}>
+          <div className={cn('care-textInput__trailingIcon')}>
             {trailingIcon}
           </div>
         )}
-        {suffix && <div className={cn("care-textInput__suffix")}>{suffix}</div>}
+        {suffix && <div className={cn('care-textInput__suffix')}>{suffix}</div>}
       </div>
       {helperText && (
-        <div className={cn("care-textInput__helperText")}>{helperText}</div>
+        <div className={cn('care-textInput__helperText')}>{helperText}</div>
       )}
       {errorMessage && (
-        <div className={cn("care-textInput__errorMessage")}>{errorMessage}</div>
+        <div className={cn('care-textInput__errorMessage')}>{errorMessage}</div>
       )}
     </div>
   );

@@ -1,23 +1,23 @@
 .display {
-  @apply text-30 tracking-xdense leading-36;
+  @apply text-30 leading-36 tracking-xdense;
 }
 
 .h1 {
-  @apply text-20 tracking-xdense leading-24;
+  @apply text-20 leading-24 tracking-xdense;
 }
 
 .h2 {
-  @apply text-16 tracking-dense leading-20;
+  @apply text-16 leading-20 tracking-dense;
 }
 
 .h3 {
-  @apply text-14 tracking-dense leading-16;
+  @apply text-14 leading-16 tracking-dense;
 }
 
 .paragraph {
-  @apply text-14 tracking-dense leading-16;
+  @apply text-14 leading-16 tracking-dense;
 }
 
 .label {
-  @apply text-11 tracking-normal leading-12;
+  @apply text-11 leading-12 tracking-normal;
 }

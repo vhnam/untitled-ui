@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
-import styles from "./Card.module.css";
+import styles from './Card.module.css';
 
 interface IProps {
   lead: string;

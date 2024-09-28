@@ -1,9 +1,9 @@
-import { Tag, type TagProps } from "@repo/ui";
-import type { Meta, StoryObj } from "@storybook/react";
-import outdent from "outdent";
+import { Tag, type TagProps } from '@repo/ui';
+import type { Meta, StoryObj } from '@storybook/react';
+import outdent from 'outdent';
 
 const meta = {
-  title: "Components/Tag",
+  title: 'Components/Tag',
   component: Tag,
   parameters: {
     chromatic: { disableSnapshot: false },
@@ -22,24 +22,24 @@ export default meta;
 type Story = StoryObj<TagProps>;
 
 export const Default = {
-  name: "Default",
+  name: 'Default',
   args: {
-    children: "Tag",
+    children: 'Tag',
   },
 } satisfies Story;
 
 export const SmallSize = {
-  name: "Small Size",
+  name: 'Small Size',
   args: {
-    children: "Tag",
-    size: "small",
+    children: 'Tag',
+    size: 'small',
   },
 } satisfies Story;
 
 export const WithIcon = {
-  name: "With Icon",
+  name: 'With Icon',
   args: {
-    children: "Tag",
-    icon: "CheckCircle",
+    children: 'Tag',
+    icon: 'CheckCircle',
   },
 } satisfies Story;

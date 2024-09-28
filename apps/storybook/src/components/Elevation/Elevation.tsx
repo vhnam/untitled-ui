@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Elevation.module.css";
+import styles from './Elevation.module.css';
 
 type ElevationType = {
   x: string;
@@ -16,16 +16,16 @@ interface IProps {
 }
 
 const argb2rgba = (color: string) => {
-  return "#" + color.slice(3, 9) + color[1] + color[2];
+  return '#' + color.slice(3, 9) + color[1] + color[2];
 };
 
 const Elevation = ({ value }: IProps) => {
   const boxShadow = value
     .map(
       ({ x, y, blur, spread, color }: ElevationType) =>
-        `${x}px ${y}px ${blur}px ${spread}px ${argb2rgba(color)}`,
+        `${x}px ${y}px ${blur}px ${spread}px ${argb2rgba(color)}`
     )
-    .join(", ");
+    .join(', ');
 
   return (
     <div>
@@ -39,7 +39,7 @@ const Elevation = ({ value }: IProps) => {
       </div>
       <p
         style={{
-          fontSize: "14px",
+          fontSize: '14px',
         }}
       >
         box-shadow: {boxShadow}

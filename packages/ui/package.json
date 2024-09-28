@@ -18,7 +18,8 @@
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "type-check": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "format": "prettier ./src --write"
   },
   "peerDependencies": {
     "react": "^18.2.0"
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/icons": "*",
+    "@repo/prettier-config": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
     "@types/react": "^18.2.61",

@@ -1,9 +1,9 @@
-import { IconButton, type IconButtonProps } from "@repo/ui";
-import type { Meta, StoryObj } from "@storybook/react";
-import outdent from "outdent";
+import { IconButton, type IconButtonProps } from '@repo/ui';
+import type { Meta, StoryObj } from '@storybook/react';
+import outdent from 'outdent';
 
 const meta = {
-  title: "Components/IconButton",
+  title: 'Components/IconButton',
   component: IconButton,
   parameters: {
     chromatic: { disableSnapshot: false },
@@ -22,17 +22,17 @@ export default meta;
 type Story = StoryObj<IconButtonProps>;
 
 export const Default = {
-  name: "Default",
+  name: 'Default',
   args: {
-    iconName: "ArrowForward",
-    variant: "default",
+    iconName: 'ArrowForward',
+    variant: 'default',
   },
 } satisfies Story;
 
 export const Negative = {
-  name: "Negative",
+  name: 'Negative',
   args: {
-    iconName: "ArrowForward",
-    variant: "negative",
+    iconName: 'ArrowForward',
+    variant: 'negative',
   },
 } satisfies Story;

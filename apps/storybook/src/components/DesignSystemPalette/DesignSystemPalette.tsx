@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Card from "../Card";
+import Card from '../Card';
 
-import styles from "./DesignSystemPalette.module.css";
+import styles from './DesignSystemPalette.module.css';
 
 interface IProps {
   name: string;

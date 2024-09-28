@@ -1,5 +1,5 @@
 .care-tag {
-  @apply relative inline-flex items-center gap-xxxsmall p-xxsmall h2 font-semiBold rounded-xsmall;
+  @apply h2 relative inline-flex items-center gap-xxxsmall rounded-xsmall p-xxsmall font-semiBold;
 }
 
 .care-tag__low {

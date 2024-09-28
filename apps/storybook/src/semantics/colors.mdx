@@ -1,8 +1,8 @@
-import { Meta, Source } from "@storybook/blocks";
-import tokens from "@repo/design-tokens";
+import { Meta, Source } from '@storybook/blocks';
+import tokens from '@repo/design-tokens';
 
-import DesignSystemPalette from "../components/DesignSystemPalette";
-import GradientColor from "../components/GradientColor";
+import DesignSystemPalette from '../components/DesignSystemPalette';
+import GradientColor from '../components/GradientColor';
 
 <Meta title="Semantics/Colors" />
 
@@ -13,7 +13,7 @@ import GradientColor from "../components/GradientColor";
 <DesignSystemPalette
   name="Neutral"
   colors={Object.keys(tokens.color.semantic)
-    .filter((colorKey) => colorKey.startsWith("neutral"))
+    .filter((colorKey) => colorKey.startsWith('neutral'))
     .reduce((acc, colorKey) => {
       acc[colorKey] = tokens.color.semantic[colorKey];
       return acc;
@@ -23,7 +23,7 @@ import GradientColor from "../components/GradientColor";
 <DesignSystemPalette
   name="Negative"
   colors={Object.keys(tokens.color.semantic)
-    .filter((colorKey) => colorKey.startsWith("negative"))
+    .filter((colorKey) => colorKey.startsWith('negative'))
     .reduce((acc, colorKey) => {
       acc[colorKey] = tokens.color.semantic[colorKey];
       return acc;
@@ -33,7 +33,7 @@ import GradientColor from "../components/GradientColor";
 <DesignSystemPalette
   name="Information"
   colors={Object.keys(tokens.color.semantic)
-    .filter((colorKey) => colorKey.startsWith("information"))
+    .filter((colorKey) => colorKey.startsWith('information'))
     .reduce((acc, colorKey) => {
       acc[colorKey] = tokens.color.semantic[colorKey];
       return acc;
@@ -43,7 +43,7 @@ import GradientColor from "../components/GradientColor";
 <DesignSystemPalette
   name="Attention"
   colors={Object.keys(tokens.color.semantic)
-    .filter((colorKey) => colorKey.startsWith("attention"))
+    .filter((colorKey) => colorKey.startsWith('attention'))
     .reduce((acc, colorKey) => {
       acc[colorKey] = tokens.color.semantic[colorKey];
       return acc;
@@ -53,7 +53,7 @@ import GradientColor from "../components/GradientColor";
 <DesignSystemPalette
   name="Attention"
   colors={Object.keys(tokens.color.semantic)
-    .filter((colorKey) => colorKey.startsWith("positive"))
+    .filter((colorKey) => colorKey.startsWith('positive'))
     .reduce((acc, colorKey) => {
       acc[colorKey] = tokens.color.semantic[colorKey];
       return acc;
@@ -65,7 +65,7 @@ import GradientColor from "../components/GradientColor";
 <DesignSystemPalette
   name="Canvas"
   colors={Object.keys(tokens.color.semantic)
-    .filter((colorKey) => colorKey.startsWith("canvas"))
+    .filter((colorKey) => colorKey.startsWith('canvas'))
     .reduce((acc, colorKey) => {
       acc[colorKey] = tokens.color.semantic[colorKey];
       return acc;
@@ -77,7 +77,7 @@ import GradientColor from "../components/GradientColor";
 <DesignSystemPalette
   name="Text"
   colors={Object.keys(tokens.color.semantic)
-    .filter((colorKey) => colorKey.startsWith("text"))
+    .filter((colorKey) => colorKey.startsWith('text'))
     .reduce((acc, colorKey) => {
       acc[colorKey] = tokens.color.semantic[colorKey];
       return acc;
@@ -89,7 +89,7 @@ import GradientColor from "../components/GradientColor";
 <DesignSystemPalette
   name="Border"
   colors={Object.keys(tokens.color.semantic)
-    .filter((colorKey) => colorKey.startsWith("border"))
+    .filter((colorKey) => colorKey.startsWith('border'))
     .reduce((acc, colorKey) => {
       acc[colorKey] = tokens.color.semantic[colorKey];
       return acc;

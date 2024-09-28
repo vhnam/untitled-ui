@@ -1,10 +1,10 @@
-import { Icon } from "@repo/icons";
-import { Textarea, type TextareaProps } from "@repo/ui";
-import type { Meta, StoryObj } from "@storybook/react";
-import outdent from "outdent";
+import { Icon } from '@repo/icons';
+import { Textarea, type TextareaProps } from '@repo/ui';
+import type { Meta, StoryObj } from '@storybook/react';
+import outdent from 'outdent';
 
 const meta = {
-  title: "Components/Textarea",
+  title: 'Components/Textarea',
   component: Textarea,
   parameters: {
     chromatic: { disableSnapshot: false },
@@ -23,42 +23,42 @@ export default meta;
 type Story = StoryObj<TextareaProps>;
 
 export const Default = {
-  name: "Default",
+  name: 'Default',
   args: {
-    label: "Hint",
-    name: "name",
-    helperText: "Supporting Text",
+    label: 'Hint',
+    name: 'name',
+    helperText: 'Supporting Text',
   },
 } satisfies Story;
 
 export const Error = {
-  name: "Error",
+  name: 'Error',
   args: {
-    label: "Hint",
-    name: "name",
+    label: 'Hint',
+    name: 'name',
     error: true,
-    errorMessage: "Supporting Text",
-    helperText: "Required *",
-    value: "Input",
+    errorMessage: 'Supporting Text',
+    helperText: 'Required *',
+    value: 'Input',
   },
 } satisfies Story;
 
 export const Disabled = {
-  name: "Disabled",
+  name: 'Disabled',
   args: {
-    label: "Hint",
-    name: "name",
+    label: 'Hint',
+    name: 'name',
     disabled: true,
-    helperText: "Supporting Text",
+    helperText: 'Supporting Text',
   },
 } satisfies Story;
 
 export const CharacterCount = {
-  name: "Character Count",
+  name: 'Character Count',
   args: {
-    label: "Hint",
-    name: "name",
-    helperText: "Supporting Text",
+    label: 'Hint',
+    name: 'name',
+    helperText: 'Supporting Text',
     showCount: true,
     maxLength: 100,
   },
