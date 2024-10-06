@@ -3,5 +3,5 @@
 }
 
 .care-badge__content {
-  @apply label absolute right-0 top-0 z-10 min-h-xxsmall min-w-xxsmall origin-top-right translate-x-2/4 translate-y-[-50%] scale-100 rounded-full bg-negativeBold px-xxxsmall py-[0.125rem] font-medium text-textNeutralSubtle;
+  @apply label absolute right-0 top-0 z-10 min-h-xxsmall min-w-xxsmall origin-top-right translate-x-2/4 scale-100 rounded-full bg-negativeBold px-xxxsmall py-[0.125rem] font-medium text-textNeutralSubtle;
 }

@@ -1,0 +1,19 @@
+.care-top-navigation {
+  @apply flex flex-col gap-small bg-canvasSubtle p-medium;
+}
+
+.care-top-navigation__actions {
+  @apply flex items-center justify-between;
+}
+
+.care-top-navigation__title {
+  @apply h1 font-semiBold;
+}
+
+.care-top-navigation--compressed {
+  @apply gap-xsmall py-xsmall;
+
+  & .care-top-navigation__title {
+    @apply h2 line-clamp-1;
+  }
+}
