@@ -1,5 +1,6 @@
-import type { Config } from 'tailwindcss';
 import tokens from '@repo/design-tokens';
+import get from 'lodash/get';
+import type { Config } from 'tailwindcss';
 
 type FontSizeKey = keyof typeof tokens.fontSize;
 type FontWeightKey = keyof typeof tokens.fontWeight;
@@ -8,6 +9,20 @@ type LetterSpacingKey = keyof typeof tokens.letterSpacing;
 type SpacingKey = keyof typeof tokens.spacing;
 type RadiusKey = keyof typeof tokens.radius;
 type BorderWidthKey = keyof typeof tokens.borderWidth;
+type ElevationKey = keyof typeof tokens.elevation;
+
+type ElevationType = {
+  x: string;
+  y: string;
+  blur: string;
+  spread: string;
+  color: string;
+  type: string;
+};
+
+const argb2rgba = (color: string) => {
+  return '#' + color.slice(3, 9) + color[1] + color[2];
+};
 
 // We want each package to be responsible for its own content.
 const config: Omit<Config, 'content'> = {
@@ -69,6 +84,18 @@ const config: Omit<Config, 'content'> = {
         return acc;
       },
       {} as Record<BorderWidthKey, string>
+    ),
+    boxShadow: (Object.keys(tokens.elevation) as ElevationKey[]).reduce(
+      (acc, elevationLevel) => {
+        acc[elevationLevel] = get(tokens.elevation, elevationLevel)
+          .map(
+            ({ x, y, blur, spread, color }: ElevationType) =>
+              `${x}px ${y}px ${blur}px ${spread}px ${argb2rgba(color)}`
+          )
+          .join(', ');
+        return acc;
+      },
+      {} as Record<ElevationKey, string>
     ),
     extend: {
       content: {

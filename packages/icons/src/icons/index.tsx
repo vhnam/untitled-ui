@@ -1,4 +1,5 @@
 export { default as ArrowDropDown } from './ArrowDropDown';
+export { default as ArrowDropUp } from './ArrowDropUp';
 export { default as ArrowForward } from './ArrowForward';
 export { default as Cancel } from './Cancel';
 export { default as Checkbox } from './Checkbox';

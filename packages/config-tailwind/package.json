@@ -9,5 +9,8 @@
     "@repo/design-tokens": "*",
     "@repo/typescript-config": "*",
     "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

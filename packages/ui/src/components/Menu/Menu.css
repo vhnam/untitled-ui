@@ -1,0 +1,11 @@
+.care-menu {
+  @apply absolute w-full py-xxsmall bg-canvasSubtle shadow-3;
+}
+
+.care-menu__item {
+  @apply px-medium py-small paragraph text-textNeutralBold;
+
+  &:hover {
+    @apply bg-neutralSubtle cursor-pointer;
+  }
+}

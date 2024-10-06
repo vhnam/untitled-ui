@@ -1,0 +1,3 @@
+.care-dropdown .care-textInput__input {
+  @apply relative cursor-pointer;
+}
