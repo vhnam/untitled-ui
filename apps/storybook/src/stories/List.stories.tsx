@@ -30,8 +30,8 @@ export const Default = {
       <>
         <ListItem
           title="Title"
-          trailingAccessories={<Icon name="CreditCard" />}
-          leadingAccessories={<IconButton iconName="ArrowForward" />}
+          trailingAdornment={<Icon name="CreditCard" />}
+          leadingAdornment={<IconButton iconName="ArrowForward" />}
         />
       </>
     ),
