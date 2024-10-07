@@ -6,6 +6,12 @@ export { Divider, type DividerProps } from './components/Divider';
 export { Dropdown, type DropdownProps } from './components/Dropdown';
 export { IconButton, type IconButtonProps } from './components/IconButton';
 export {
+  List,
+  ListItem,
+  type ListProps,
+  type ListItemProps,
+} from './components/List';
+export {
   Menu,
   MenuItem,
   type MenuProps,

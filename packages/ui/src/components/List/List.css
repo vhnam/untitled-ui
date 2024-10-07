@@ -1,0 +1,15 @@
+.care-list-item {
+  @apply flex items-center gap-xsmall px-medium py-xxsmall text-textNeutralBolder;
+}
+
+.care-list-item__container {
+  @apply w-full;
+}
+
+.care-list-item__title {
+  @apply h3 font-semiBold;
+}
+
+.care-list-item__subtitle {
+  @apply paragraph text-textNeutralBold;
+}

@@ -1,0 +1,33 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import { List } from '@repo/ui';
+
+import * as ListStories from './List.stories';
+
+<Meta of={ListStories} />
+
+# List
+
+- [Overview](#overview)
+- [Usage](#usage)
+
+## Overview
+
+Lists are used to give a quick information about a performed action. Lists can be added or removed from a page or another
+component. They are also used as a filter.
+
+**Best practices**
+
+- Lists text should be concise and easily scannable.
+- Lists text should be explicit and indicate its purpose.
+- Lists should be very close to or within the performed action.
+- Use Badge component if the information given is not related to a performed action.
+
+## Imports
+
+```js
+import { List } from '@repo/ui';
+```
+
+## Usage
+
+Lists are related to a performed action. They should be very close by the action's trigger. Moreover, a tag can be added or removed from that place. They cannot exist on their own.
