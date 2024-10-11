@@ -3,14 +3,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "style-dictionary build --config ./sd.config.cjs"
+    "build": " node ./build.js"
   },
   "exports": {
     ".": "./dist/tokens.json"
   },
   "devDependencies": {
-    "@repo/typescript-config": "*",
-    "style-dictionary": "^4.1.2",
-    "typescript": "latest"
+    "style-dictionary": "^4.1.2"
   }
 }

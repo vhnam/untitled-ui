@@ -1,0 +1,39 @@
+.care-banner {
+  @apply flex items-center gap-xsmall rounded-xsmall px-small py-xsmall text-textNeutralSubtle;
+
+  &__leading-icon {
+    @apply p-xsmall;
+  }
+
+  &__container {
+    @apply flex w-full items-center justify-between;
+  }
+
+  &__title {
+    @apply h3 font-semiBold;
+  }
+
+  &__subtitle {
+    @apply paragraph;
+  }
+
+  &--negative {
+    @apply bg-negativeBoldPressed;
+  }
+
+  &--positive {
+    @apply bg-positiveBoldPressed;
+  }
+
+  &--attention {
+    @apply bg-attentionBoldPressed;
+  }
+
+  &--information {
+    @apply bg-informationBoldPressed;
+  }
+
+  &--neutral {
+    @apply bg-neutralBoldPressed;
+  }
+}

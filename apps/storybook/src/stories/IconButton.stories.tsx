@@ -25,7 +25,7 @@ export const Default = {
   name: 'Default',
   args: {
     iconName: 'ArrowForward',
-    variant: 'default',
+    color: 'default',
   },
 } satisfies Story;
 
@@ -33,6 +33,14 @@ export const Negative = {
   name: 'Negative',
   args: {
     iconName: 'ArrowForward',
-    variant: 'negative',
+    color: 'negative',
+  },
+} satisfies Story;
+
+export const Inherit = {
+  name: 'Inherit',
+  args: {
+    iconName: 'ArrowForward',
+    color: 'inherit',
   },
 } satisfies Story;

@@ -2,51 +2,58 @@ import { PropsWithChildren, ReactNode } from 'react';
 
 import { cn } from '../../utils/cn';
 
+export type ButtonColor = 'default' | 'positive' | 'negative' | 'inherit';
+
+export type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
+
 export interface ButtonProps extends PropsWithChildren {
+  className?: string;
+  color?: ButtonColor;
   disabled?: boolean;
-  htmlType?: 'button' | 'submit' | 'reset';
   leadingIcon?: ReactNode;
   size?: 'default' | 'small';
   trailingIcon?: ReactNode;
-  type?: 'primary' | 'secondary' | 'tertiary';
-  variant?: 'default' | 'positive' | 'negative';
+  type?: 'button' | 'submit' | 'reset';
+  variant?: ButtonVariant;
 }
 
 const Button = ({
   children,
+  className,
+  color = 'default',
   disabled = false,
-  htmlType = 'button',
+  type = 'button',
   leadingIcon,
   size = 'default',
   trailingIcon,
-  type = 'primary',
-  variant = 'default',
+  variant = 'primary',
 }: ButtonProps) => {
   return (
     <button
-      className={cn('care-button', {
+      className={cn('care-button', className, {
         ['care-button__default care-button--primary']:
-          variant === 'default' && type === 'primary',
+          color === 'default' && variant === 'primary',
         ['care-button__default care-button--secondary']:
-          variant === 'default' && type === 'secondary',
+          color === 'default' && variant === 'secondary',
         ['care-button__default care-button--tertiary']:
-          variant === 'default' && type === 'tertiary',
+          color === 'default' && variant === 'tertiary',
         ['care-button__positive care-button--primary']:
-          variant === 'positive' && type === 'primary',
+          color === 'positive' && variant === 'primary',
         ['care-button__positive care-button--secondary']:
-          variant === 'positive' && type === 'secondary',
+          color === 'positive' && variant === 'secondary',
         ['care-button__positive care-button--tertiary']:
-          variant === 'positive' && type === 'tertiary',
+          color === 'positive' && variant === 'tertiary',
         ['care-button__negative care-button--primary']:
-          variant === 'negative' && type === 'primary',
+          color === 'negative' && variant === 'primary',
         ['care-button__negative care-button--secondary']:
-          variant === 'negative' && type === 'secondary',
+          color === 'negative' && variant === 'secondary',
         ['care-button__negative care-button--tertiary']:
-          variant === 'negative' && type === 'tertiary',
+          color === 'negative' && variant === 'tertiary',
+        ['care-button__inherit']: color === 'inherit',
         ['care-button--small']: size === 'small',
       })}
       disabled={disabled}
-      type={htmlType}
+      type={type}
     >
       {leadingIcon}
       {children}

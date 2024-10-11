@@ -1,0 +1,32 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import { Banner } from '@repo/ui';
+
+import * as BannerStories from './Banner.stories';
+
+<Meta of={BannerStories} />
+
+# Banner
+
+- [Overview](#overview)
+- [Usage](#usage)
+
+## Overview
+
+Banners are used to give a quick visual indication to the users.
+
+**Best practices**
+
+- Banner component should be filled only with numbers or a single word max.
+- Use them next to a label or a description.
+- Use the active state only with a label.
+- Use Tag component if the information given needs to be related to a performed action.
+
+## Imports
+
+```js
+import { Banner } from '@repo/ui';
+```
+
+## Usage
+
+Banners are used to give a quick and short scannable information to the users. They are mostly filled with numbers or a single word.

@@ -20,10 +20,6 @@ type ElevationType = {
   type: string;
 };
 
-const argb2rgba = (color: string) => {
-  return '#' + color.slice(3, 9) + color[1] + color[2];
-};
-
 // We want each package to be responsible for its own content.
 const config: Omit<Config, 'content'> = {
   theme: {
@@ -90,7 +86,7 @@ const config: Omit<Config, 'content'> = {
         acc[elevationLevel] = get(tokens.elevation, elevationLevel)
           .map(
             ({ x, y, blur, spread, color }: ElevationType) =>
-              `${x}px ${y}px ${blur}px ${spread}px ${argb2rgba(color)}`
+              `${x}px ${y}px ${blur}px ${spread}px ${color}`
           )
           .join(', ');
         return acc;

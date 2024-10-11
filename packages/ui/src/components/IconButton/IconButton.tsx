@@ -1,19 +1,22 @@
 import { Icon, type IconName } from '@repo/icons';
+
 import { Button, type ButtonProps } from '../Button';
 
+export type IconButtonColor = 'default' | 'negative' | 'inherit';
+
 export interface IconButtonProps
-  extends Pick<ButtonProps, 'disabled' | 'htmlType'> {
+  extends Pick<ButtonProps, 'disabled' | 'type' | 'className'> {
+  color?: 'default' | 'negative' | 'inherit';
   iconName: IconName;
-  variant?: 'default' | 'negative';
 }
 
 const IconButton = ({
   iconName,
-  variant = 'default',
+  color = 'default',
   ...props
 }: IconButtonProps) => {
   return (
-    <Button type="secondary" variant={variant} size="small" {...props}>
+    <Button variant="secondary" color={color} size="small" {...props}>
       <Icon name={iconName} />
     </Button>
   );

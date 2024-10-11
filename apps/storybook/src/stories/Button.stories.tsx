@@ -26,7 +26,7 @@ export const Default = {
   name: 'Default',
   args: {
     children: 'Button',
-    variant: 'default',
+    color: 'default',
   },
 } satisfies Story;
 
@@ -34,7 +34,7 @@ export const Positive = {
   name: 'Positive',
   args: {
     children: 'Button',
-    variant: 'positive',
+    color: 'positive',
   },
 } satisfies Story;
 
@@ -42,7 +42,15 @@ export const Negative = {
   name: 'Negative',
   args: {
     children: 'Button',
-    variant: 'negative',
+    color: 'negative',
+  },
+} satisfies Story;
+
+export const Inherit = {
+  name: 'Inherit',
+  args: {
+    children: 'Button',
+    color: 'inherit',
   },
 } satisfies Story;
 
