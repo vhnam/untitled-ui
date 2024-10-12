@@ -3,7 +3,15 @@ import { type IconName } from '@repo/icons';
 export const IconNames: Record<string, IconName[]> = {
   Arrows: ['ArrowBack', 'ArrowDropDown', 'ArrowDropUp', 'ArrowForward'],
   Statuses: ['Cancel', 'CheckCircle', 'Warning'],
-  Action: ['CreditCard', 'Delete', 'Edit', 'Notifications', 'Close'],
+  Action: [
+    'Close',
+    'CreditCard',
+    'Delete',
+    'Edit',
+    'FilterAlt',
+    'Notifications',
+    'Sort',
+  ],
   Features: ['Image', 'Location'],
 };
 

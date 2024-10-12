@@ -7,7 +7,7 @@ export type TopNavigationState = 'default' | 'compressed';
 export interface TopNavigationProps {
   actions?: ReactNode;
   leading?: ReactNode;
-  title: string;
+  title?: string;
   state?: TopNavigationState;
 }
 

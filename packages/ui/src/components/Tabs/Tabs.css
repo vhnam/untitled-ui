@@ -1,0 +1,45 @@
+.care-tabs {
+  &__container {
+    @apply scrollbar-none flex items-center overflow-x-auto whitespace-nowrap border-b-small border-solid border-b-borderNeutralSubtle;
+  }
+
+  &__tab {
+    @apply relative cursor-pointer px-medium py-xsmall text-textNeutralBold;
+
+    &--active {
+      @apply text-textNeutralBolder;
+
+      &::after {
+        @apply absolute bottom-0 left-0 right-0 border-b-medium border-solid border-b-textNeutralBolder content-empty;
+      }
+    }
+
+    &:active {
+      @apply bg-neutralSubtlePressed;
+    }
+
+    &--disabled {
+      @apply pointer-events-none cursor-default text-textNeutralDisabled;
+
+      &::after {
+        @apply border-b-neutralSubtle;
+      }
+    }
+  }
+
+  &__tab-container {
+    @apply flex items-center gap-xxxsmall;
+  }
+
+  &__tab-label {
+    @apply h3 font-semiBold;
+  }
+
+  &__panel {
+    @apply hidden;
+
+    &--active {
+      @apply block;
+    }
+  }
+}
