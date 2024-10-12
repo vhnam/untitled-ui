@@ -1,5 +1,7 @@
-import { Icon } from "@repo/icons";
-import { nanoid } from "nanoid";
+'use client';
+
+import { Icon } from '@repo/icons';
+import { nanoid } from 'nanoid';
 import {
   KeyboardEvent,
   type MouseEvent,
@@ -7,14 +9,14 @@ import {
   useMemo,
   useRef,
   useState,
-} from "react";
+} from 'react';
 
-import MenuContext from "../Menu/Menu.context";
+import MenuContext from '../Menu/Menu.context';
 
-import useOnClickOutside from "../../hooks/useClickOutside";
+import useOnClickOutside from '../../hooks/useClickOutside';
 
-import { Menu } from "../Menu";
-import { TextInput, type TextInputProps } from "../TextInput";
+import { Menu } from '../Menu';
+import { TextInput, type TextInputProps } from '../TextInput';
 
 export interface DropdownProps extends PropsWithChildren, TextInputProps {}
 
@@ -71,7 +73,7 @@ const Dropdown = ({ children, onBlur, onFocus, ...props }: DropdownProps) => {
           ref={textFieldInputRef}
           value={value}
           trailingIcon={
-            <Icon name={isShowMenu ? "ArrowDropUp" : "ArrowDropDown"} />
+            <Icon name={isShowMenu ? 'ArrowDropUp' : 'ArrowDropDown'} />
           }
           onClick={handleInputClick}
           onKeyDown={handleKeypress}

@@ -1,3 +1,5 @@
+'use client';
+
 import { Icon } from '@repo/icons';
 import { nanoid } from 'nanoid';
 import {

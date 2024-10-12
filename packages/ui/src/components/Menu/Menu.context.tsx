@@ -1,4 +1,6 @@
-import { createContext } from "react";
+'use client';
+
+import { createContext } from 'react';
 
 export interface MenuContextProps {
   onClick: (value: string) => void;
