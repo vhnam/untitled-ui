@@ -1,11 +1,11 @@
-import { Dropdown, MenuItem, type MenuItemProps } from "@repo/ui";
-import type { Meta, StoryObj } from "@storybook/react";
-import outdent from "outdent";
+import { Dropdown, MenuItem, type MenuItemProps } from '@repo/ui';
+import type { Meta, StoryObj } from '@storybook/react';
+import outdent from 'outdent';
 
 type DropdownProps = typeof Dropdown;
 
 const meta = {
-  title: "Components/Dropdown",
+  title: 'Components/Dropdown',
   component: Dropdown,
   parameters: {
     chromatic: { disableSnapshot: false },
@@ -25,32 +25,32 @@ type Story = StoryObj<DropdownProps>;
 
 const options: MenuItemProps[] = [
   {
-    label: "Audi",
-    value: "Audi",
+    label: 'Audi',
+    value: 'Audi',
   },
   {
-    label: "BMW",
-    value: "BMW",
+    label: 'BMW',
+    value: 'BMW',
   },
   {
-    label: "Ford",
-    value: "Ford",
+    label: 'Ford',
+    value: 'Ford',
   },
   {
-    label: "Honda",
-    value: "Honda",
+    label: 'Honda',
+    value: 'Honda',
   },
   {
-    label: "Nissan",
-    value: "Nissan",
+    label: 'Nissan',
+    value: 'Nissan',
   },
 ];
 
 export const Default = {
-  name: "Default",
+  name: 'Default',
   args: {
-    label: "Car",
-    name: "car",
+    label: 'Car',
+    name: 'car',
     children: (
       <>
         {options.map((option) => (
@@ -62,13 +62,13 @@ export const Default = {
 } satisfies Story;
 
 export const Error = {
-  name: "Error",
+  name: 'Error',
   args: {
-    label: "Hint",
-    name: "name",
+    label: 'Hint',
+    name: 'name',
     error: true,
-    errorMessage: "Supporting Text",
-    helperText: "Required *",
+    errorMessage: 'Supporting Text',
+    helperText: 'Required *',
     children: (
       <>
         {options.map((option) => (
@@ -80,12 +80,12 @@ export const Error = {
 } satisfies Story;
 
 export const Disabled = {
-  name: "Disabled",
+  name: 'Disabled',
   args: {
-    label: "Hint",
-    name: "name",
+    label: 'Hint',
+    name: 'name',
     disabled: true,
-    helperText: "Supporting Text",
+    helperText: 'Supporting Text',
     children: (
       <>
         {options.map((option) => (
